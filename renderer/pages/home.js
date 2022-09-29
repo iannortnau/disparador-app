@@ -1,31 +1,97 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import QRCode from 'react-qr-code';
+import React, { useContext, useEffect, useState } from 'react';
+import { GlobalContext, GlobalProvider } from '../context/GlobalContext';
+import Load from '../components/ornament/Load';
+import Autenticate from '../components/ornament/Autenticate';
+import QrCode from '../components/ornament/QrCode';
+import Shoter from '../components/ornament/Shoter';
+import ShoterLoad from '../components/ornament/ShoterLoad';
+import Status from '../components/ornament/Status';
+const { ipcRenderer } = require('electron');
+const Store = require('electron-store');
+const store = new Store();
 
-function Home() {
-  const [qr, setQr] = useState("111");
+export default function Home(){
+  const {
+    load,
+    authenticated,
+    whatsAuthenticated,
+    shoting,
+    setLoad,
+    validateKey,
+    setQr,
+    setWhatsAuthenticated,
+    setWhatsReady
+  } = useContext(GlobalContext);
 
-  async function click() {
-    const resp = await axios.get("http://localhost:8888/api");
-    setQr(resp.data.qr);
+  useEffect(() => {
+    //store.delete("key");
+    resp();
+    login();
+    return () => {
+      ipcRenderer.removeAllListeners("responseChannel");
+    };
+  }, []);
+
+  function resp(){
+    ipcRenderer.on("responseChannel",(event,response) => {
+      console.log(response);
+      const code = response.code;
+
+      if(code === "qrcode"){
+        setQr(response.data);
+      }
+      if(code === "authenticated"){
+        setWhatsAuthenticated(true);
+      }
+      if(code === "ready"){
+        setWhatsReady(true);
+      }
+      if(code === "loggedOut"){
+        setWhatsAuthenticated(false);
+      }
+    })
   }
+
+  function login(){
+    setLoad(true);
+    const key = store.get('key');
+    if(key){
+      validateKey(key);
+    }else{
+      setLoad(false);
+    }
+  }
+
+
+  async function send(){
+    const args = {
+      comand: "send",
+      data:{
+        number: "555197486814",
+        message:"testando som"
+      }
+
+    }
+    ipcRenderer.send("comandChannel",args)
+  }
+
   return (
     <>
-      <input
-        type={'button'}
-        value={"test"}
-        onClick={click}
-      />
-      <div style={{ height: "auto", margin: "0 auto", width: "50%" }}>
-        <QRCode
-          size={256}
-          style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-          value={qr}
-          viewBox={`0 0 256 256`}
-        />
-      </div>
+      {load&&
+        <Load/>
+      }
+      {!load&&!authenticated&&
+        <Autenticate/>
+      }
+      {!load&&authenticated&&!whatsAuthenticated&&
+        <QrCode/>
+      }
+      {!load&&authenticated&&whatsAuthenticated&&!shoting&&
+        <Shoter/>
+      }
+      {!load&&authenticated&&whatsAuthenticated&&shoting&&
+        <ShoterLoad/>
+      }
     </>
   );
 }
-
-export default Home;

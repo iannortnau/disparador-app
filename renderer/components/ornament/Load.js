@@ -1,4 +1,3 @@
-import styles from "../../styles/components/Load.module.css";
 import Page from "../structural/Page";
 import Block from "../structural/Block";
 import img from "../../public/Post de tecnologia cortado.png"
@@ -7,12 +6,15 @@ import Loader from "../structural/Loader";
 
 
 
-export default function Load(props){
+export default function Load(){
 
     return (
         <Page>
             <Block>
-                <Image src={img}/>
+                <Image
+                  src={img}
+                  priority
+                />
                 <Loader/>
             </Block>
         </Page>

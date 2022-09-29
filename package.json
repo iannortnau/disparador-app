@@ -14,7 +14,11 @@
     "axios": "^0.27.2",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
+    "moment": "^2.29.4",
     "react-qr-code": "^2.0.8",
+    "react-select": "^5.4.0",
+    "react-tsparticles": "^2.3.2",
+    "tsparticles": "^2.3.2",
     "whatsapp-web.js": "^1.17.1"
   },
   "devDependencies": {

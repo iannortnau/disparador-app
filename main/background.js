@@ -1,6 +1,7 @@
 import { app } from 'electron';
 import serve from 'electron-serve';
 import { createWindow } from './helpers';
+require("./whatsClient");
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -14,11 +15,12 @@ if (isProd) {
   await app.whenReady();
 
   const mainWindow = createWindow('main', {
-    width: 1000,
-    height: 600,
+    width: 410,
+    height: 620,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
+      webSecurity: false
     }
   });
 

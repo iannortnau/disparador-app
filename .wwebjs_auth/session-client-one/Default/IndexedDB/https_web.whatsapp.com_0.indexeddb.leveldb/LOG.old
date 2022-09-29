@@ -1,0 +1,14 @@
+2022/09/29-00:16:07.965 23f8 Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/.wwebjs_auth/session-client-one/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/29-00:16:07.966 23f8 Recovering log #16
+2022/09/29-00:16:08.063 23f8 Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/.wwebjs_auth/session-client-one/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000016.log 
+2022/09/29-00:16:08.063 23f8 Delete type=2 #17
+2022/09/29-00:16:08.063 23f8 Delete type=2 #15
+2022/09/29-00:16:08.063 23f8 Delete type=2 #14
+2022/09/29-00:16:29.508 2405 Level-0 table #22: started
+2022/09/29-00:16:29.532 2405 Level-0 table #22: 1142299 bytes OK
+2022/09/29-00:16:29.533 2405 Delete type=0 #16
+2022/09/29-00:16:29.588 23f8 Compacting 1@1 + 2@2 files
+2022/09/29-00:16:29.654 23f8 Generated table #23@1: 37308 keys, 2233878 bytes
+2022/09/29-00:16:29.676 23f8 Generated table #24@1: 15730 keys, 783174 bytes
+2022/09/29-00:16:29.676 23f8 Compacted 1@1 + 2@2 files => 3017052 bytes
+2022/09/29-00:16:29.677 23f8 compacted to: files[ 0 0 2 0 0 0 0 ]

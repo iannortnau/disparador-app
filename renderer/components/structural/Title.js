@@ -1,6 +1,5 @@
 import styles from "../../styles/components/Title.module.css"
 import Line from "./Line";
-import {useState} from "react";
 
 
 export default function Title(props){

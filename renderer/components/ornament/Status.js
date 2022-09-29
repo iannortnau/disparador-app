@@ -1,0 +1,21 @@
+import Page from "../structural/Page";
+import Block from "../structural/Block";
+import img from "../../public/Post de tecnologia cortado.png"
+import Image from "next/image";
+import Loader from "../structural/Loader";
+import Title from '../structural/Title';
+
+
+
+export default function Status(){
+
+    return (
+            <Block>
+                <Title
+                  style={{fontSize:12}}
+                >
+                  Status de Conexão
+                </Title>
+            </Block>
+    );
+}

@@ -1,7 +1,7 @@
 import styles from "../../styles/components/Message.module.css"
 import Line from "./Line";
 import {useContext, useEffect, useState} from "react";
-import {GlobalContext} from "../../contexts/globalContext";
+import {GlobalContext} from "../../context/GlobalContext";
 
 
 export default function Message(props){

@@ -5,26 +5,26 @@ import Image from "next/image";
 import TextInput from "../structural/TextInput";
 import {useContext, useState} from "react";
 import Button from "../structural/Button";
-import {GlobalContext} from "../../contexts/globalContext";
+import {GlobalContext} from "../../context/GlobalContext";
 import axios from "axios";
 
 
 
 
-export default function Autenticate(props){
+export default function Autenticate(){
     const {
-        message,
         setMessage,
         setLoad,
         setAutenticate,
-        setKey
+        setKey,
+        validateKey
     } = useContext(GlobalContext);
     const [auxKey, setAuxKey] = useState("");
 
     function validate(){
         if(auxKey.length!==0){
             setLoad(true);
-            login(auxKey);
+            validateKey(auxKey);
         }else{
             setMessage({
                 text:"A Chave não pode estar vazia.",
@@ -34,39 +34,14 @@ export default function Autenticate(props){
         }
     }
 
-    async function login(localKey){
-        try{
-            console.log(localKey);
-
-            const resp = await axios.get("https://coletor-frontend.vercel.app/api/validation/"+localKey);
-
-            console.log(resp);
-
-            if(resp.status === 200){
-                setAutenticate(true);
-                setMessage({
-                    text:"Chave válida",
-                    bgColor:"green",
-                    txColor:"white"
-                })
-                localStorage.setItem("key",localKey);
-                setKey(localKey);
-            }
-        }catch (e) {
-            setAutenticate(false);
-            setMessage({
-                text:"Chave inválida",
-                bgColor:"red",
-                txColor:"white"
-            })
-        }
-        setLoad(false)
-    }
 
     return (
-        <Page>
-            <Block>
-                <Image src={img}/>
+      <Page>
+          <Block>
+                <Image
+                  src={img}
+                  priority
+                />
                 <TextInput
                     placeholder={"Chave"}
                     onChange={function (aux) {
