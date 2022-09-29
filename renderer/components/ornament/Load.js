@@ -13,7 +13,6 @@ export default function Load(){
             <Block>
                 <Image
                   src={img}
-                  priority
                 />
                 <Loader/>
             </Block>

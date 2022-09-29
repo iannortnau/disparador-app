@@ -40,7 +40,6 @@ export default function Autenticate(){
           <Block>
                 <Image
                   src={img}
-                  priority
                 />
                 <TextInput
                     placeholder={"Chave"}

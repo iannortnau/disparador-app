@@ -45,7 +45,6 @@ export default function QrCode(props){
           <>
             <Image
               src={img}
-              priority
             />
             <Title>Iniciando WhatsApp</Title>
             <Loader/>

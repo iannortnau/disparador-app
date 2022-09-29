@@ -36,12 +36,14 @@ export default function Shoter(){
     const auxNumbersList = numbers.replaceAll("+","").split("\n");
     const auxNumbersListFinal = [];
     for (let i = 0; i < auxNumbersList.length; i++) {
-      if(auxNumbersList[i].length === 12){
+      if(auxNumbersList[i].length === 12 || auxNumbersList[i].length === 13){
         auxNumbersListFinal.push(auxNumbersList[i]);
       }
+      /*
       if(auxNumbersList[i].length === 13){
         auxNumbersListFinal.push(auxNumbersList[i].replace("9",""));
       }
+      */
 
     }
     shot(auxNumbersListFinal,0,auxNumbersListFinal.length);

@@ -1,0 +1,14 @@
+2022/09/29-09:24:14.718 5cb9 Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/29-09:24:14.718 5cb9 Recovering log #12
+2022/09/29-09:24:14.722 5cb9 Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000012.log 
+2022/09/29-09:24:32.166 5caa Level-0 table #18: started
+2022/09/29-09:24:32.190 5caa Level-0 table #18: 1341133 bytes OK
+2022/09/29-09:24:32.192 5caa Delete type=0 #12
+2022/09/29-09:24:32.297 5caf Compacting 1@1 + 2@2 files
+2022/09/29-09:24:32.347 5caf Generated table #19@1: 33405 keys, 2236792 bytes
+2022/09/29-09:24:32.364 5caf Generated table #20@1: 12912 keys, 769474 bytes
+2022/09/29-09:24:32.364 5caf Compacted 1@1 + 2@2 files => 3006266 bytes
+2022/09/29-09:24:32.365 5caf compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/09/29-09:24:32.365 5caf Delete type=2 #18
+2022/09/29-09:24:32.365 5caf Delete type=2 #15
+2022/09/29-09:24:32.365 5caf Delete type=2 #14

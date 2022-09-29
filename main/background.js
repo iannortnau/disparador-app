@@ -16,10 +16,7 @@ if (isProd) {
 
   const mainWindow = createWindow('main', {
     minWidth: 480,
-    maxWidth: 480,
-    minHeight: 720,
-    maxHeight: 720,
-    resizable: false,
+    minHeight: 920,
     title: "Disparador App",
     webPreferences: {
       nodeIntegration: true,
