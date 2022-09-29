@@ -15,8 +15,12 @@ if (isProd) {
   await app.whenReady();
 
   const mainWindow = createWindow('main', {
-    width: 410,
-    height: 620,
+    minWidth: 480,
+    maxWidth: 480,
+    minHeight: 720,
+    maxHeight: 720,
+    resizable: false,
+    title: "Disparador App",
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,

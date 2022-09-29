@@ -1,9 +1,10 @@
 .input{
+    width: 160px;
     border-style: none;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 10px;
     text-align: center;
-    background-color: #fbdd54;
+    background-color: #d7bf3b;
     color: white;
     font-weight: bold;
     font-size: 20px;

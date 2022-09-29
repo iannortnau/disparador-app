@@ -25,7 +25,7 @@ export default function Message(props){
     return (
         <Line
             style={{
-                zIndex: 1,
+                zIndex: 2,
                 top:0,
                 position:"absolute",
                 backgroundColor:props.bgColor,

@@ -11,6 +11,7 @@ export default function Button(props){
                 className={styles.input}
                 type={"button"}
                 onClick={props.onClick}
+                style={props.style}
             />
         </Line>
     )

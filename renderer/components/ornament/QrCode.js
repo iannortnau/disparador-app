@@ -34,7 +34,7 @@ export default function QrCode(props){
           <>
             <QRCode
               value={qr}
-              bgColor={"#476364"}
+              bgColor={"#65a5a7"}
               fgColor={"#000000"}
             />
             <Line>

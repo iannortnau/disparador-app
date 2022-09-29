@@ -22,8 +22,8 @@ ipcMain.on("comandChannel", async (event, args) => {
       await client.initialize();
     }
   }
-  if (comand === "destroy") {
-    await client.destroy();
+  if (comand === "logOut") {
+    await client.logout();
   }
   if(comand === "send"){
     const message = data.message;

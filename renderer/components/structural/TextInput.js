@@ -7,9 +7,10 @@ export default function TextInput(props){
         <Line>
             <input
                 className={styles.input}
-                type={"text"}
+                type={props.type}
                 onChange={props.onChange}
                 placeholder={props.placeholder}
+                style={props.style}
             />
         </Line>
     )

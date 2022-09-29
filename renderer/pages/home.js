@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { GlobalContext, GlobalProvider } from '../context/GlobalContext';
+import React, { useContext, useEffect } from 'react';
+import { GlobalContext } from '../context/GlobalContext';
 import Load from '../components/ornament/Load';
 import Autenticate from '../components/ornament/Autenticate';
 import QrCode from '../components/ornament/QrCode';
@@ -62,19 +62,6 @@ export default function Home(){
     }
   }
 
-
-  async function send(){
-    const args = {
-      comand: "send",
-      data:{
-        number: "555197486814",
-        message:"testando som"
-      }
-
-    }
-    ipcRenderer.send("comandChannel",args)
-  }
-
   return (
     <>
       {load&&
@@ -92,6 +79,7 @@ export default function Home(){
       {!load&&authenticated&&whatsAuthenticated&&shoting&&
         <ShoterLoad/>
       }
+      <Status/>
     </>
   );
 }

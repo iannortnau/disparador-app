@@ -7,6 +7,9 @@ const store = new Store();
 export const GlobalContext = createContext({});
 
 export function GlobalProvider(props){
+  const [whatsMessage,setWhatsMessage] = useState();
+  const [numbers,setNumbers] = useState();
+  const [delay,setDelay] = useState(0);
   const [apiUrl,setApiUrl] = useState("http://82.180.160.211:3000/validation/");
   const [load, setLoad] = useState(true);
   const [authenticated, setAuthenticated] = useState(false);
@@ -74,7 +77,12 @@ export function GlobalProvider(props){
         message,
         setMessage,
         qr,
-        setQr
+        setQr,
+        setWhatsMessage,
+        whatsMessage,
+        numbers,
+        setNumbers,
+        delay,setDelay
       }}>
       {props.children}
     </GlobalContext.Provider>

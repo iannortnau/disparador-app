@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "my-nextron-app",
+  "name": "disparador-app",
   "description": "My application description",
   "version": "1.0.0",
   "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
@@ -11,6 +11,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.2",
     "axios": "^0.27.2",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
