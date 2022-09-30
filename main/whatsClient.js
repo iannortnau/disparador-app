@@ -5,7 +5,7 @@ let chromeRoute;
 if(sist === "linux"){
   chromeRoute = "/usr/bin/google-chrome-stable";
 }else {
-  chromeRoute = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+  chromeRoute = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 }
 const client = new Client({
   authStrategy: new LocalAuth({clientId: "client-Chrome",dataPath:"./"}),
