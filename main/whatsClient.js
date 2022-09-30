@@ -37,8 +37,8 @@ ipcMain.on("comandChannel", async (event, args) => {
   }
   if(comand === "send"){
     const message = data.message;
-    const number = data.number;
-    await client.sendMessage(number+"@c.us",message);
+    const number = await client.getNumberId(data.number);
+    await client.sendMessage(number._serialized,message);
   }
 
 });

@@ -1,5 +1,57 @@
-2022/09/29-09:23:29.088 5b26 Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/09/29-09:23:29.089 5b26 Recovering log #12
-2022/09/29-09:23:29.093 5b26 Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000012.log 
-2022/09/29-09:23:29.093 5b26 Delete type=2 #13
-2022/09/29-09:23:29.093 5b26 Delete type=2 #11
+2022/09/30-10:18:43.309 b14c Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/30-10:18:43.310 b14c Recovering log #649
+2022/09/30-10:18:43.338 b14c Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000649.log 
+2022/09/30-10:18:55.858 b147 Compacting 1@1 + 9@2 files
+2022/09/30-10:18:55.911 b147 Generated table #661@1: 18202 keys, 2181131 bytes
+2022/09/30-10:18:55.941 b147 Generated table #662@1: 3831 keys, 2161935 bytes
+2022/09/30-10:18:55.981 b147 Generated table #663@1: 1841 keys, 2146076 bytes
+2022/09/30-10:18:56.003 b147 Generated table #664@1: 1832 keys, 2146838 bytes
+2022/09/30-10:18:56.029 b147 Generated table #665@1: 2736 keys, 2156718 bytes
+2022/09/30-10:18:56.057 b147 Generated table #666@1: 2900 keys, 2154301 bytes
+2022/09/30-10:18:56.083 b147 Generated table #667@1: 2255 keys, 2156796 bytes
+2022/09/30-10:18:56.116 b147 Generated table #668@1: 4579 keys, 2160344 bytes
+2022/09/30-10:18:56.163 b147 Generated table #669@1: 22172 keys, 2190997 bytes
+2022/09/30-10:18:56.163 b147 Compacted 1@1 + 9@2 files => 19455136 bytes
+2022/09/30-10:18:56.164 b147 compacted to: files[ 0 0 19 0 0 0 0 ]
+2022/09/30-10:18:56.165 b147 Delete type=2 #647
+2022/09/30-10:18:56.165 b147 Delete type=2 #644
+2022/09/30-10:18:56.165 b147 Delete type=2 #639
+2022/09/30-10:18:56.165 b147 Delete type=2 #643
+2022/09/30-10:18:56.165 b147 Delete type=2 #651
+2022/09/30-10:18:56.165 b147 Delete type=2 #642
+2022/09/30-10:18:56.165 b147 Delete type=2 #640
+2022/09/30-10:18:56.165 b147 Delete type=2 #646
+2022/09/30-10:18:56.165 b147 Delete type=2 #641
+2022/09/30-10:18:56.165 b147 Delete type=2 #645
+2022/09/30-10:19:15.972 b157 Level-0 table #671: started
+2022/09/30-10:19:15.999 b157 Level-0 table #671: 1126129 bytes OK
+2022/09/30-10:19:16.001 b157 Delete type=0 #649
+2022/09/30-10:19:16.010 b157 Compacting 1@0 + 0@1 files
+2022/09/30-10:19:16.027 b157 Generated table #672@0: 17389 keys, 188802 bytes
+2022/09/30-10:19:16.043 b157 Generated table #673@0: 13482 keys, 451635 bytes
+2022/09/30-10:19:16.043 b157 Compacted 1@0 + 0@1 files => 640437 bytes
+2022/09/30-10:19:16.043 b157 compacted to: files[ 0 2 19 0 0 0 0 ]
+2022/09/30-10:19:16.044 b157 Delete type=2 #671
+2022/09/30-10:19:17.046 b14c Compacting 1@1 + 9@2 files
+2022/09/30-10:19:17.209 b14c Generated table #674@1: 26721 keys, 2270238 bytes
+2022/09/30-10:19:17.285 b14c Generated table #675@1: 26514 keys, 2267328 bytes
+2022/09/30-10:19:17.340 b14c Generated table #676@1: 47045 keys, 2249910 bytes
+2022/09/30-10:19:17.391 b14c Generated table #677@1: 22501 keys, 2191210 bytes
+2022/09/30-10:19:17.424 b14c Generated table #678@1: 9727 keys, 2133372 bytes
+2022/09/30-10:19:17.507 b14c Generated table #679@1: 106644 keys, 2258014 bytes
+2022/09/30-10:19:17.587 b14c Generated table #680@1: 101026 keys, 2250551 bytes
+2022/09/30-10:19:17.656 b14c Generated table #681@1: 101350 keys, 2249894 bytes
+2022/09/30-10:19:17.729 b14c Generated table #682@1: 102391 keys, 2253510 bytes
+2022/09/30-10:19:17.733 b14c Generated table #683@1: 4548 keys, 104151 bytes
+2022/09/30-10:19:17.733 b14c Compacted 1@1 + 9@2 files => 20228178 bytes
+2022/09/30-10:19:17.734 b14c compacted to: files[ 0 1 20 0 0 0 0 ]
+2022/09/30-10:19:17.734 b14c Delete type=2 #653
+2022/09/30-10:19:17.734 b14c Delete type=2 #654
+2022/09/30-10:19:17.734 b14c Delete type=2 #655
+2022/09/30-10:19:17.734 b14c Delete type=2 #657
+2022/09/30-10:19:17.734 b14c Delete type=2 #673
+2022/09/30-10:19:17.734 b14c Delete type=2 #630
+2022/09/30-10:19:17.735 b14c Delete type=2 #658
+2022/09/30-10:19:17.735 b14c Delete type=2 #656
+2022/09/30-10:19:17.735 b14c Delete type=2 #659
+2022/09/30-10:19:17.735 b14c Delete type=2 #631

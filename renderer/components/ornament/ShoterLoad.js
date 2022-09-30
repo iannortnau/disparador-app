@@ -33,19 +33,14 @@ export default function Shoter(){
   }, []);
 
   function getNumbers(){
-    const auxNumbersList = numbers.replaceAll("+","").split("\n");
+    const auxNumbersList = numbers.split("\n");
     const auxNumbersListFinal = [];
     for (let i = 0; i < auxNumbersList.length; i++) {
-      if(auxNumbersList[i].length === 12 || auxNumbersList[i].length === 13){
-        auxNumbersListFinal.push(auxNumbersList[i]);
+      if(auxNumbersList[i].length > 0){
+        auxNumbersListFinal.push(auxNumbersList[i].replace(/[^0-9]/g,''));
       }
-      /*
-      if(auxNumbersList[i].length === 13){
-        auxNumbersListFinal.push(auxNumbersList[i].replace("9",""));
-      }
-      */
-
     }
+    console.log(auxNumbersListFinal);
     shot(auxNumbersListFinal,0,auxNumbersListFinal.length);
   }
 

@@ -36,6 +36,7 @@
     "react-dom": "^18.2.0"
   },
   "build": {
+    "productName": "Disparador App",
     "linux": {
       "target": [
         {
