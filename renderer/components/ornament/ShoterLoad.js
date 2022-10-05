@@ -51,7 +51,7 @@ export default function Shoter(){
       i++;
       setTimeout(()=>{
         shot(numbersList,i,total);
-      },(delay*100));
+      },(delay*1000));
     }else {
       setShoting(false);
     }
