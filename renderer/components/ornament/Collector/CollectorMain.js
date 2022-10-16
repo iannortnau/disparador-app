@@ -20,7 +20,6 @@ export default function CollectorMain(){
     setResposta,
     numbersColetor,
     setNumbersColetor,
-    numbers,
     setNumbers,
     find,
     setAplication,
@@ -79,11 +78,6 @@ export default function CollectorMain(){
         })
         if(resp.status === 200){
           setNumbersColetor(resp.data);
-          let auxNumbers = numbers
-          for (let i = 0; i < resp.data.length; i++) {
-            auxNumbers += `+55${resp.data[i]}\n`;
-          }
-          setNumbers(auxNumbers);
           setResposta(true);
           setMessage({
             text:"Sucesso",
@@ -108,6 +102,16 @@ export default function CollectorMain(){
         txColor: "white"
       })
     }
+  }
+
+  function passNumbers(){
+    let auxNumbers = "";
+    for (let i = 0; i < numbersColetor.length; i++) {
+      if(numbersColetor[i] !== undefined){
+        auxNumbers += `+55${numbersColetor[i]}\n`;
+      }
+    }
+    setNumbers(auxNumbers);
   }
 
   if(!resposta){
@@ -193,6 +197,7 @@ export default function CollectorMain(){
             }}
             value={"DISPARAR"}
             onClick={function(){
+              passNumbers();
               setAplication("ShoterControler");
             }}
           />
