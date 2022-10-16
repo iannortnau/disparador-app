@@ -1,11 +1,14 @@
 import React, { useContext, useEffect } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
-import Load from '../components/ornament/Load';
-import Autenticate from '../components/ornament/Autenticate';
-import QrCode from '../components/ornament/QrCode';
-import Shoter from '../components/ornament/Shoter';
-import ShoterLoad from '../components/ornament/ShoterLoad';
-import Status from '../components/ornament/Status';
+import Load from '../components/ornament/main/Load';
+import Autenticate from '../components/ornament/main/Autenticate';
+import QrCode from '../components/ornament/main/QrCode';
+import Shoter from '../components/ornament/shoter/Shoter';
+import ShoterLoad from '../components/ornament/shoter/ShoterLoad';
+import Status from '../components/ornament/main/Status';
+import ShoterControler from '../components/ornament/shoter/ShoterControler';
+import ApplicationPanel from '../components/ornament/main/ApplicationPanel';
+import ApplicationControl from '../components/ornament/main/ApplicationControl';
 const { ipcRenderer } = require('electron');
 const Store = require('electron-store');
 const store = new Store();
@@ -15,7 +18,6 @@ export default function Home(){
     load,
     authenticated,
     whatsAuthenticated,
-    shoting,
     setLoad,
     validateKey,
     setQr,
@@ -58,7 +60,7 @@ export default function Home(){
     if(key){
       validateKey(key);
     }else{
-      setLoad(false);
+      setLoad(false);a
     }
   }
 
@@ -73,11 +75,8 @@ export default function Home(){
       {!load&&authenticated&&!whatsAuthenticated&&
         <QrCode/>
       }
-      {!load&&authenticated&&whatsAuthenticated&&!shoting&&
-        <Shoter/>
-      }
-      {!load&&authenticated&&whatsAuthenticated&&shoting&&
-        <ShoterLoad/>
+      {!load&&authenticated&&whatsAuthenticated&&
+        <ApplicationControl/>
       }
       <Status/>
     </>

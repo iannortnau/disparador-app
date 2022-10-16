@@ -7,10 +7,12 @@ const store = new Store();
 export const GlobalContext = createContext({});
 
 export function GlobalProvider(props){
-  const [whatsMessage,setWhatsMessage] = useState();
-  const [numbers,setNumbers] = useState();
-  const [delay,setDelay] = useState(0);
   const [apiUrl,setApiUrl] = useState("http://82.180.160.211:3000/validation/");
+  const [whatsMessage,setWhatsMessage] = useState();
+  const [aplication, setAplication] = useState("ApplicationPanel");
+  const [numbers,setNumbers] = useState();
+  const [numbersColetor,setNumbersColetor] = useState();
+  const [delay,setDelay] = useState(0);
   const [load, setLoad] = useState(true);
   const [authenticated, setAuthenticated] = useState(false);
   const [whatsAuthenticated, setWhatsAuthenticated] = useState(false);
@@ -18,6 +20,7 @@ export function GlobalProvider(props){
   const [shoting, setShoting] = useState(false);
   const [qr, setQr] = useState();
   const [key, setKey] = useState("");
+  const [resposta, setResposta] = useState(false);
   const [message, setMessage] = useState({
     text:"",
     bgColor:"",
@@ -56,33 +59,44 @@ export function GlobalProvider(props){
 
   }
 
+   async function find(data){
+    try{
+      const resp = await axios.post("http://10838.masterdaweb.net:8080/search",data.data,{
+        headers:{
+          "token": key
+        }
+      });
+
+      console.log(resp.data.numbers);
+
+      if (resp.status === 200) {
+        return {status:200,data:resp.data.numbers}
+      }
+    }catch (e) {
+        throw new Error(e);
+    }
+  }
+
   return (
     <GlobalContext.Provider
       value={{
-        apiUrl,
-        setApiUrl,
-        load,
-        setLoad,
-        authenticated,
-        setAuthenticated,
-        key,
-        setKey,
+        apiUrl,setApiUrl,
+        load,setLoad,
+        authenticated,setAuthenticated,
+        key,setKey,
+        whatsAuthenticated,setWhatsAuthenticated,
+        whatsReady,setWhatsReady,
+        shoting,setShoting,
+        message,setMessage,
+        qr,setQr,
+        whatsMessage,setWhatsMessage,
+        numbers, setNumbers,
+        numbersColetor, setNumbersColetor,
+        delay,setDelay,
+        aplication,setAplication,
+        resposta,setResposta,
         validateKey,
-        whatsAuthenticated,
-        setWhatsAuthenticated,
-        setWhatsReady,
-        whatsReady,
-        shoting,
-        setShoting,
-        message,
-        setMessage,
-        qr,
-        setQr,
-        setWhatsMessage,
-        whatsMessage,
-        numbers,
-        setNumbers,
-        delay,setDelay
+        find
       }}>
       {props.children}
     </GlobalContext.Provider>

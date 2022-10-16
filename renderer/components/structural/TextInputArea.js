@@ -10,6 +10,7 @@ export default function TextInputArea(props){
                 onChange={props.onChange}
                 placeholder={props.placeholder}
                 style={props.style}
+                value={props.value}
             />
         </Line>
     )
