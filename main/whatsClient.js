@@ -17,6 +17,8 @@ const client = new Client({
 
 let isInit = false;
 let frameEvent;
+let createingScript = false;
+let scriptId;
 
 //Controle de comandos
 ipcMain.on("comandChannel", async (event, args) => {
@@ -41,6 +43,40 @@ ipcMain.on("comandChannel", async (event, args) => {
     await client.sendMessage(number._serialized,message);
   }
 
+  if(comand === "createScript"){
+    const name = data.name;
+    const myWid = client.info.wid._serialized;
+    const resp = await client.createGroup(name,[myWid]);
+    createingScript = true;
+    scriptId = resp.gid._serialized;
+  }
+  if(comand === "getScripts"){
+    const chats = await client.getChats();
+
+    const scriptsList = [];
+
+    for (let i = 0; i < chats.length; i++) {
+      const chat = chats[i];
+      if(chat.name.includes("!ROTEIRO!:")){
+        scriptsList.push({
+          name:chat.name.replace("!ROTEIRO!:",""),
+          id:chat.id._serialized
+        })
+      }
+    }
+
+    event.sender.send("comandChannel",scriptsList);
+  }
+  if(comand === "deleteScript"){
+    console.log(data.id);
+    const id = data.id;
+    const chat = await client.getChatById(id);
+    if(await chat.delete()){
+      event.sender.send("responseChannel", {
+        code:"scriptDeleted"
+      });
+    }
+  }
 });
 
 //Controle de eventos do whats
@@ -72,6 +108,21 @@ client.on('auth_failure', msg => {
 client.on('disconnected', (reason) => {
   console.log('Client was logged out', reason);
   frameEvent.sender.send("responseChannel", {code:"loggedOut"});
+});
+
+client.on('group_update', async (notification) => {
+  if (createingScript && scriptId === notification.chatId) {
+    await client.archiveChat(notification.chatId);
+    createingScript = false;
+    scriptId = null;
+    frameEvent.sender.send("responseChannel", {
+      code:"scriptCreated",
+      data:{
+        scriptId: notification.chatId,
+        name:notification.body
+      }
+    });
+  }
 });
 
 

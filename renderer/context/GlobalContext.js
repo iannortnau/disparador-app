@@ -1,6 +1,7 @@
 import {createContext, useState} from "react";
 import axios from "axios";
 import moment from "moment";
+import { ipcRenderer } from 'electron';
 const Store = require('electron-store');
 const store = new Store();
 
@@ -21,6 +22,7 @@ export function GlobalProvider(props){
   const [qr, setQr] = useState();
   const [key, setKey] = useState("");
   const [resposta, setResposta] = useState(false);
+  const [scriptsList, setScriptsList] = useState([]);
   const [message, setMessage] = useState({
     text:"",
     bgColor:"",
@@ -77,6 +79,19 @@ export function GlobalProvider(props){
     }
   }
 
+  function getScripts(){
+    const args = {
+      comand: "getScripts",
+    }
+
+    ipcRenderer.send("comandChannel",args);
+
+    ipcRenderer.once("comandChannel",function(event, args) {
+      setScriptsList(null);
+      setScriptsList(args);
+    })
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -95,8 +110,10 @@ export function GlobalProvider(props){
         delay,setDelay,
         aplication,setAplication,
         resposta,setResposta,
+        scriptsList,setScriptsList,
         validateKey,
-        find
+        find,
+        getScripts
       }}>
       {props.children}
     </GlobalContext.Provider>

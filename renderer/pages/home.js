@@ -22,7 +22,8 @@ export default function Home(){
     validateKey,
     setQr,
     setWhatsAuthenticated,
-    setWhatsReady
+    setWhatsReady,
+    getScripts
   } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -47,9 +48,16 @@ export default function Home(){
       }
       if(code === "ready"){
         setWhatsReady(true);
+        getScripts();
       }
       if(code === "loggedOut"){
         setWhatsAuthenticated(false);
+      }
+      if(code === "scriptCreated"){
+        getScripts();
+      }
+      if(code === "scriptDeleted"){
+        getScripts();
       }
     })
   }

@@ -40,7 +40,7 @@ export default function ApplicationPanel(){
         <AppBlock
           img={imgRoteiro}
           title={"Roteiros"}
-          page={"ApplicationPanel"}
+          page={"ScriptControl"}
         />
       </AppGrid>
       <Button
