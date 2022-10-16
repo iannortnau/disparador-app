@@ -23,6 +23,7 @@ export function GlobalProvider(props){
   const [key, setKey] = useState("");
   const [resposta, setResposta] = useState(false);
   const [scriptsList, setScriptsList] = useState([]);
+  const [script, setScript] = useState();
   const [message, setMessage] = useState({
     text:"",
     bgColor:"",
@@ -111,6 +112,7 @@ export function GlobalProvider(props){
         aplication,setAplication,
         resposta,setResposta,
         scriptsList,setScriptsList,
+        script,setScript,
         validateKey,
         find,
         getScripts

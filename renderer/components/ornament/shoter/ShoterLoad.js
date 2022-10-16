@@ -15,11 +15,10 @@ let stopEvent;
 export default function Shoter(){
   const {
     numbers,
-    setMessage,
     setShoting,
     whatsMessage,
     delay,
-    shoting
+    script
   } = useContext(GlobalContext);
   const [total, setTotal] = useState(1);
 
@@ -62,7 +61,8 @@ export default function Shoter(){
       comand: "send",
       data:{
         number: number,
-        message:whatsMessage
+        message:whatsMessage,
+        script
       }
 
     }

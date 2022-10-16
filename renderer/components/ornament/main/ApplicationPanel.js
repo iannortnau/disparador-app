@@ -39,8 +39,13 @@ export default function ApplicationPanel(){
         />
         <AppBlock
           img={imgRoteiro}
-          title={"Roteiros"}
-          page={"ScriptControl"}
+          title={"Criar Roteiros"}
+          page={"ScriptCreate"}
+        />
+        <AppBlock
+          img={imgRoteiro}
+          title={"Deletar Roteiros"}
+          page={"ScriptDelete"}
         />
       </AppGrid>
       <Button

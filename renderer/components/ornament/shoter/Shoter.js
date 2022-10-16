@@ -8,6 +8,7 @@ import {GlobalContext} from "../../../context/GlobalContext";
 import Title from "../../structural/Title";
 import TextInputArea from '../../structural/TextInputArea';
 import Delay from '../../structural/Delay';
+import ScriptSelector from '../../structural/ScriptSelector';
 
 
 
@@ -19,16 +20,21 @@ export default function Shoter(){
     numbers,
     setMessage,
     setShoting,
-    setAplication
+    setAplication,
+    script,
+    setScript,
   } = useContext(GlobalContext);
+
+
 
   useEffect(() => {
     //setNumbers(null);
     setWhatsMessage(null);
+    setScript(null);
   }, []);
 
   function shot(){
-    if(whatsMessage&&numbers){
+    if((whatsMessage||script)&&numbers){
       setShoting(true);
     }else{
       setMessage({
@@ -44,7 +50,7 @@ export default function Shoter(){
       <Block>
         <Image src={img}/>
 
-        <Title style={{ margin:4 }}>Mensagem</Title>
+        <Title style={{ margin:4 }}>Mensagem ou Roteiro</Title>
         <TextInputArea
           onChange={(aux)=>{
             setWhatsMessage(aux.target.value);
@@ -52,8 +58,11 @@ export default function Shoter(){
           style={{
             height:75,
             marginTop:0,
-            width:"80%"
+            width:299
           }}
+        />
+        <ScriptSelector
+          onChange={setScript}
         />
 
         <Title style={{ margin:4 }}>Números</Title>
@@ -65,7 +74,7 @@ export default function Shoter(){
           style={{
             marginTop:0,
             height:75,
-            width:"80%"
+            width:299
           }}
         />
         <Title style={{ margin:4 }}>Intervalo</Title>

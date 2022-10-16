@@ -23,7 +23,8 @@ export default function Home(){
     setQr,
     setWhatsAuthenticated,
     setWhatsReady,
-    getScripts
+    getScripts,
+    setMessage
   } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -55,9 +56,25 @@ export default function Home(){
       }
       if(code === "scriptCreated"){
         getScripts();
+        setTimeout(function() {
+          setLoad(false);
+          setMessage({
+            text:"Roteiro Criado",
+            bgColor:"green",
+            txColor:"white"
+          });
+        },1000);
       }
       if(code === "scriptDeleted"){
         getScripts();
+        setTimeout(function() {
+          setLoad(false);
+          setMessage({
+            text:"Roteiro Deletado",
+            bgColor:"green",
+            txColor:"white"
+          });
+        },3000);
       }
     })
   }

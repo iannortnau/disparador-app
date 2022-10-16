@@ -37,10 +37,22 @@ ipcMain.on("comandChannel", async (event, args) => {
   if (comand === "logOut") {
     await client.logout();
   }
+
   if(comand === "send"){
     const message = data.message;
+    const script = data.script;
     const number = await client.getNumberId(data.number);
+
     await client.sendMessage(number._serialized,message);
+
+    if(script){
+      const id = script.value;
+      const chat = await client.getChatById(id);
+      const messages = await chat.fetchMessages({limit:100});
+      for (let i = 0; i < messages.length; i++) {
+        await messages[i].forward(number._serialized);
+      }
+    }
   }
 
   if(comand === "createScript"){
@@ -57,10 +69,10 @@ ipcMain.on("comandChannel", async (event, args) => {
 
     for (let i = 0; i < chats.length; i++) {
       const chat = chats[i];
-      if(chat.name.includes("!ROTEIRO!:")){
+      if(chat.name.includes("ROTEIRO:")){
         scriptsList.push({
-          name:chat.name.replace("!ROTEIRO!:",""),
-          id:chat.id._serialized
+          label:chat.name.replace("ROTEIRO:",""),
+          value:chat.id._serialized
         })
       }
     }
@@ -76,6 +88,17 @@ ipcMain.on("comandChannel", async (event, args) => {
         code:"scriptDeleted"
       });
     }
+  }
+  if(comand === "sendScriptMessages"){
+    console.log(data.id);
+    const id = data.id.value;
+    const chat = await client.getChatById(id);
+    const messages = await chat.fetchMessages({limit:100});
+    await client.sendMessage('555180500305@c.us',{});
+    for (let i = 0; i < messages.length; i++) {
+      await messages[i].forward('555180500305@c.us');
+    }
+    event.sender.send("comandChannel",messages);
   }
 });
 

@@ -3,6 +3,7 @@
     z-index: 1;
     display: flex;
     width: 30%;
+    height: 120px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -14,7 +15,7 @@
     user-select: none;
 }
 .title{
-    font-size: 20px;
+    font-size: 15px;
     color: #5bdfe4;
 }
 .img{
