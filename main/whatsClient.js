@@ -5,7 +5,7 @@ let chromeRoute;
 if(sist === "linux"){
   chromeRoute = "/usr/bin/google-chrome-stable";
 }else {
-  chromeRoute = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+  chromeRoute = "resources\\app.asar.unpacked\\node_modules\\puppeteer\\.local-chromium\\win64-982053\\chrome-win\\chrome.exe";
 }
 const client = new Client({
   authStrategy: new LocalAuth({clientId: "client-Chrome",dataPath:"./"}),

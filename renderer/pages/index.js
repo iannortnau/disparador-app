@@ -3,17 +3,13 @@ import { GlobalContext } from '../context/GlobalContext';
 import Load from '../components/ornament/main/Load';
 import Autenticate from '../components/ornament/main/Autenticate';
 import QrCode from '../components/ornament/main/QrCode';
-import Shoter from '../components/ornament/shoter/Shoter';
-import ShoterLoad from '../components/ornament/shoter/ShoterLoad';
 import Status from '../components/ornament/main/Status';
-import ShoterControler from '../components/ornament/shoter/ShoterControler';
-import ApplicationPanel from '../components/ornament/main/ApplicationPanel';
 import ApplicationControl from '../components/ornament/main/ApplicationControl';
 const { ipcRenderer } = require('electron');
 const Store = require('electron-store');
 const store = new Store();
 
-export default function Home(){
+export default function Index(){
   const {
     load,
     authenticated,
@@ -85,7 +81,7 @@ export default function Home(){
     if(key){
       validateKey(key);
     }else{
-      setLoad(false);a
+      setLoad(false);
     }
   }
 

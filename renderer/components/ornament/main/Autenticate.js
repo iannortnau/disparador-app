@@ -15,8 +15,6 @@ export default function Autenticate(){
     const {
         setMessage,
         setLoad,
-        setAutenticate,
-        setKey,
         validateKey
     } = useContext(GlobalContext);
     const [auxKey, setAuxKey] = useState("");

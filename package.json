@@ -34,15 +34,5 @@
     "nextron": "^8.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "build": {
-    "productName": "Disparador App",
-    "linux": {
-      "target": [
-        {
-          "target": "deb"
-        }
-      ]
-    }
   }
 }
