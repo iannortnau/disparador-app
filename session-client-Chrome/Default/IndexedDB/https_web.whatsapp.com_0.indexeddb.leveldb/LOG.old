@@ -1,3 +1,24 @@
-2022/10/24-09:39:47.807 1ac6 Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/10/24-09:39:47.808 1ac6 Recovering log #346
-2022/10/24-09:39:47.837 1ac6 Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000346.log 
+2022/10/24-10:24:09.619 20ba Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/24-10:24:09.620 20ba Recovering log #569
+2022/10/24-10:24:09.650 20ba Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000569.log 
+2022/10/24-10:24:45.576 20c3 Level-0 table #580: started
+2022/10/24-10:24:45.600 20c3 Level-0 table #580: 1158619 bytes OK
+2022/10/24-10:24:45.601 20c3 Delete type=0 #569
+2022/10/24-10:24:45.890 20c3 Compacting 1@1 + 7@2 files
+2022/10/24-10:24:45.939 20c3 Generated table #581@1: 19016 keys, 2178267 bytes
+2022/10/24-10:24:45.983 20c3 Generated table #582@1: 31667 keys, 2248900 bytes
+2022/10/24-10:24:46.052 20c3 Generated table #583@1: 44721 keys, 2252664 bytes
+2022/10/24-10:24:46.102 20c3 Generated table #584@1: 30574 keys, 2241525 bytes
+2022/10/24-10:24:46.155 20c3 Generated table #585@1: 69465 keys, 2246867 bytes
+2022/10/24-10:24:46.207 20c3 Generated table #586@1: 84256 keys, 2240353 bytes
+2022/10/24-10:24:46.222 20c3 Generated table #587@1: 19884 keys, 455578 bytes
+2022/10/24-10:24:46.222 20c3 Compacted 1@1 + 7@2 files => 13864154 bytes
+2022/10/24-10:24:46.224 20c3 compacted to: files[ 0 0 7 0 0 0 0 ]
+2022/10/24-10:24:46.224 20c3 Delete type=2 #571
+2022/10/24-10:24:46.224 20c3 Delete type=2 #573
+2022/10/24-10:24:46.224 20c3 Delete type=2 #577
+2022/10/24-10:24:46.224 20c3 Delete type=2 #576
+2022/10/24-10:24:46.224 20c3 Delete type=2 #580
+2022/10/24-10:24:46.224 20c3 Delete type=2 #574
+2022/10/24-10:24:46.224 20c3 Delete type=2 #572
+2022/10/24-10:24:46.224 20c3 Delete type=2 #575

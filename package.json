@@ -25,7 +25,7 @@
     "react-select": "^5.4.0",
     "react-tsparticles": "^2.3.2",
     "tsparticles": "^2.3.2",
-    "whatsapp-web.js": "^1.17.1"
+    "whatsapp-web.js": "^1.18.0"
   },
   "devDependencies": {
     "electron": "^20.1.0",

@@ -1,123 +1,45 @@
-2022/10/24-09:40:07.417 1cfe Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/10/24-09:40:07.418 1cfe Recovering log #346
-2022/10/24-09:40:07.434 1cfe Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000346.log 
-2022/10/24-09:40:28.300 1cfe Level-0 table #354: started
-2022/10/24-09:40:28.328 1cfe Level-0 table #354: 1276803 bytes OK
-2022/10/24-09:40:28.329 1cfe Delete type=0 #346
-2022/10/24-09:40:28.333 1cfe Compacting 1@1 + 4@2 files
-2022/10/24-09:40:28.404 1cfe Generated table #355@1: 22413 keys, 2178729 bytes
-2022/10/24-09:40:28.501 1cfe Generated table #356@1: 31673 keys, 2225015 bytes
-2022/10/24-09:40:28.602 1cfe Generated table #357@1: 29404 keys, 2251358 bytes
-2022/10/24-09:40:28.693 1cfe Generated table #358@1: 75152 keys, 2069086 bytes
-2022/10/24-09:40:28.693 1cfe Compacted 1@1 + 4@2 files => 8724188 bytes
-2022/10/24-09:40:28.695 1cfe compacted to: files[ 0 0 4 0 0 0 0 ]
-2022/10/24-09:40:28.695 1cfe Delete type=2 #354
-2022/10/24-09:40:28.760 1cfe Level-0 table #360: started
-2022/10/24-09:40:28.784 1cfe Level-0 table #360: 1312221 bytes OK
-2022/10/24-09:40:28.785 1cfe Delete type=0 #353
-2022/10/24-09:40:28.789 1cfe Compacting 1@1 + 4@2 files
-2022/10/24-09:40:28.839 1cfe Generated table #361@1: 36845 keys, 2189180 bytes
-2022/10/24-09:40:28.880 1cfe Generated table #362@1: 16792 keys, 2201869 bytes
-2022/10/24-09:40:28.953 1cfe Generated table #363@1: 39333 keys, 2243953 bytes
-2022/10/24-09:40:29.032 1cfe Generated table #364@1: 54397 keys, 2239428 bytes
-2022/10/24-09:40:29.061 1cfe Generated table #365@1: 41805 keys, 1123729 bytes
-2022/10/24-09:40:29.061 1cfe Compacted 1@1 + 4@2 files => 9998159 bytes
-2022/10/24-09:40:29.062 1cfe compacted to: files[ 0 0 5 0 0 0 0 ]
-2022/10/24-09:40:29.062 1cfe Delete type=2 #349
-2022/10/24-09:40:29.062 1cfe Delete type=2 #358
-2022/10/24-09:40:29.062 1cfe Delete type=2 #357
-2022/10/24-09:40:29.062 1cfe Delete type=2 #360
-2022/10/24-09:40:29.062 1cfe Delete type=2 #351
-2022/10/24-09:40:29.063 1cfe Delete type=2 #356
-2022/10/24-09:40:29.063 1cfe Delete type=2 #355
-2022/10/24-09:40:29.063 1cfe Delete type=2 #348
-2022/10/24-09:40:29.063 1cfe Delete type=2 #350
-2022/10/24-09:40:29.808 1cfe Level-0 table #367: started
-2022/10/24-09:40:29.831 1cfe Level-0 table #367: 1124745 bytes OK
-2022/10/24-09:40:29.836 1cfe Delete type=0 #359
-2022/10/24-09:40:29.838 1cfe Compacting 1@1 + 4@2 files
-2022/10/24-09:40:29.899 1cfe Generated table #368@1: 22953 keys, 2179112 bytes
-2022/10/24-09:40:29.981 1cfe Generated table #369@1: 29534 keys, 2228639 bytes
-2022/10/24-09:40:30.038 1cfe Generated table #370@1: 31093 keys, 2241337 bytes
-2022/10/24-09:40:30.080 1cfe Generated table #371@1: 41461 keys, 1321080 bytes
-2022/10/24-09:40:30.080 1cfe Compacted 1@1 + 4@2 files => 7970168 bytes
-2022/10/24-09:40:30.081 1cfe compacted to: files[ 0 0 5 0 0 0 0 ]
-2022/10/24-09:40:30.242 1cfe Level-0 table #373: started
-2022/10/24-09:40:30.277 1cfe Level-0 table #373: 1335978 bytes OK
-2022/10/24-09:40:30.280 1cfe Delete type=2 #361
-2022/10/24-09:40:30.280 1cfe Delete type=2 #367
-2022/10/24-09:40:30.280 1cfe Delete type=2 #363
-2022/10/24-09:40:30.280 1cfe Delete type=0 #366
-2022/10/24-09:40:30.280 1cfe Delete type=2 #362
-2022/10/24-09:40:30.280 1cfe Delete type=2 #364
-2022/10/24-09:40:30.282 1cfe Compacting 1@1 + 4@2 files
-2022/10/24-09:40:30.336 1cfe Generated table #374@1: 37253 keys, 2188152 bytes
-2022/10/24-09:40:30.384 1cfe Generated table #375@1: 16231 keys, 2200517 bytes
-2022/10/24-09:40:30.440 1cfe Generated table #376@1: 32910 keys, 2241910 bytes
-2022/10/24-09:40:30.498 1cfe Generated table #377@1: 59375 keys, 2248060 bytes
-2022/10/24-09:40:30.501 1cfe Generated table #378@1: 400 keys, 128370 bytes
-2022/10/24-09:40:30.501 1cfe Compacted 1@1 + 4@2 files => 9007009 bytes
-2022/10/24-09:40:30.502 1cfe compacted to: files[ 0 0 6 0 0 0 0 ]
-2022/10/24-09:40:30.502 1cfe Delete type=2 #373
-2022/10/24-09:40:30.502 1cfe Delete type=2 #370
-2022/10/24-09:40:30.502 1cfe Delete type=2 #368
-2022/10/24-09:40:30.502 1cfe Delete type=2 #369
-2022/10/24-09:40:30.502 1cfe Delete type=2 #371
-2022/10/24-09:40:31.495 1cfe Level-0 table #380: started
-2022/10/24-09:40:31.518 1cfe Level-0 table #380: 1109096 bytes OK
-2022/10/24-09:40:31.520 1cfe Delete type=0 #372
-2022/10/24-09:40:31.526 1cfe Compacting 1@1 + 4@2 files
-2022/10/24-09:40:31.592 1cfe Generated table #381@1: 23279 keys, 2177916 bytes
-2022/10/24-09:40:31.647 1cfe Generated table #382@1: 29347 keys, 2227399 bytes
-2022/10/24-09:40:31.704 1cfe Generated table #383@1: 31625 keys, 2243111 bytes
-2022/10/24-09:40:31.754 1cfe Generated table #384@1: 50851 keys, 1610099 bytes
-2022/10/24-09:40:31.754 1cfe Compacted 1@1 + 4@2 files => 8258525 bytes
-2022/10/24-09:40:31.755 1cfe compacted to: files[ 0 0 6 0 0 0 0 ]
-2022/10/24-09:40:31.755 1cfe Delete type=2 #374
-2022/10/24-09:40:31.755 1cfe Delete type=2 #377
-2022/10/24-09:40:31.755 1cfe Delete type=2 #375
-2022/10/24-09:40:31.755 1cfe Delete type=2 #376
-2022/10/24-09:40:31.755 1cfe Delete type=2 #380
-2022/10/24-09:40:31.912 1cfe Level-0 table #386: started
-2022/10/24-09:40:31.932 1cfe Level-0 table #386: 1343909 bytes OK
-2022/10/24-09:40:31.933 1cfe Delete type=0 #379
-2022/10/24-09:40:31.938 1cfe Compacting 1@1 + 4@2 files
-2022/10/24-09:40:31.993 1cfe Generated table #387@1: 37529 keys, 2197177 bytes
-2022/10/24-09:40:32.040 1cfe Generated table #388@1: 15599 keys, 2201144 bytes
-2022/10/24-09:40:32.110 1cfe Generated table #389@1: 36675 keys, 2246497 bytes
-2022/10/24-09:40:32.174 1cfe Generated table #390@1: 57766 keys, 2239738 bytes
-2022/10/24-09:40:32.183 1cfe Generated table #391@1: 8463 keys, 284701 bytes
-2022/10/24-09:40:32.183 1cfe Compacted 1@1 + 4@2 files => 9169257 bytes
-2022/10/24-09:40:32.184 1cfe compacted to: files[ 0 0 7 0 0 0 0 ]
-2022/10/24-09:40:32.184 1cfe Delete type=2 #381
-2022/10/24-09:40:32.184 1cfe Delete type=2 #384
-2022/10/24-09:40:32.184 1cfe Delete type=2 #386
-2022/10/24-09:40:32.184 1cfe Delete type=2 #383
-2022/10/24-09:40:32.184 1cfe Delete type=2 #382
-2022/10/24-09:40:34.970 1cfd Level-0 table #393: started
-2022/10/24-09:40:34.996 1cfd Level-0 table #393: 1125950 bytes OK
-2022/10/24-09:40:34.997 1cfd Delete type=0 #385
-2022/10/24-09:40:35.001 1cfd Compacting 1@1 + 5@2 files
-2022/10/24-09:40:35.061 1cfd Generated table #394@1: 23286 keys, 2177894 bytes
-2022/10/24-09:40:35.116 1cfd Generated table #395@1: 29073 keys, 2221039 bytes
-2022/10/24-09:40:35.174 1cfd Generated table #396@1: 34043 keys, 2251344 bytes
-2022/10/24-09:40:35.248 1cfd Generated table #397@1: 58619 keys, 1861846 bytes
-2022/10/24-09:40:35.248 1cfd Compacted 1@1 + 5@2 files => 8512123 bytes
-2022/10/24-09:40:35.254 1cfd compacted to: files[ 0 0 6 0 0 0 0 ]
-2022/10/24-09:40:35.254 1cfd Delete type=2 #391
-2022/10/24-09:40:35.254 1cfd Delete type=2 #393
-2022/10/24-09:40:35.254 1cfd Delete type=2 #387
-2022/10/24-09:40:35.254 1cfd Delete type=2 #388
-2022/10/24-09:40:35.254 1cfd Delete type=2 #389
-2022/10/24-09:40:35.254 1cfd Delete type=2 #390
-2022/10/24-09:40:35.435 1cfd Level-0 table #399: started
-2022/10/24-09:40:35.460 1cfd Level-0 table #399: 1315347 bytes OK
-2022/10/24-09:40:35.461 1cfd Delete type=0 #392
-2022/10/24-09:40:36.836 1d00 Compacting 1@1 + 4@2 files
-2022/10/24-09:40:36.896 1d00 Generated table #400@1: 37588 keys, 2188390 bytes
-2022/10/24-09:40:36.945 1d00 Generated table #401@1: 15473 keys, 2200771 bytes
-2022/10/24-09:40:37.005 1d00 Generated table #402@1: 40387 keys, 2249100 bytes
-2022/10/24-09:40:37.061 1d00 Generated table #403@1: 53013 keys, 2239728 bytes
-2022/10/24-09:40:37.089 1d00 Generated table #404@1: 19611 keys, 523325 bytes
-2022/10/24-09:40:37.089 1d00 Compacted 1@1 + 4@2 files => 9401314 bytes
-2022/10/24-09:40:37.097 1d00 compacted to: files[ 0 0 7 0 0 0 0 ]
+2022/10/24-10:25:43.998 225a Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/24-10:25:43.998 225a Recovering log #579
+2022/10/24-10:25:44.027 225a Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000579.log 
+2022/10/24-10:26:53.835 225a Level-0 table #590: started
+2022/10/24-10:26:53.862 225a Level-0 table #590: 1275277 bytes OK
+2022/10/24-10:26:53.865 225a Delete type=0 #579
+2022/10/24-10:26:57.525 22bc Compacting 1@1 + 7@2 files
+2022/10/24-10:26:57.571 22bc Generated table #591@1: 18593 keys, 2177350 bytes
+2022/10/24-10:26:57.627 22bc Generated table #592@1: 31946 keys, 2250008 bytes
+2022/10/24-10:26:57.697 22bc Generated table #593@1: 45016 keys, 2253535 bytes
+2022/10/24-10:26:57.755 22bc Generated table #594@1: 30158 keys, 2241994 bytes
+2022/10/24-10:26:57.826 22bc Generated table #595@1: 63894 keys, 2253631 bytes
+2022/10/24-10:26:57.893 22bc Generated table #596@1: 84439 keys, 2240226 bytes
+2022/10/24-10:26:57.916 22bc Generated table #597@1: 29252 keys, 669800 bytes
+2022/10/24-10:26:57.916 22bc Compacted 1@1 + 7@2 files => 14086544 bytes
+2022/10/24-10:26:57.917 22bc compacted to: files[ 0 0 7 0 0 0 0 ]
+2022/10/24-10:26:57.917 22bc Delete type=2 #582
+2022/10/24-10:26:57.917 22bc Delete type=2 #585
+2022/10/24-10:26:57.917 22bc Delete type=2 #583
+2022/10/24-10:26:57.917 22bc Delete type=2 #581
+2022/10/24-10:26:57.917 22bc Delete type=2 #590
+2022/10/24-10:26:57.917 22bc Delete type=2 #587
+2022/10/24-10:26:57.918 22bc Delete type=2 #584
+2022/10/24-10:26:57.918 22bc Delete type=2 #586
+2022/10/24-10:27:44.010 225a Level-0 table #599: started
+2022/10/24-10:27:44.059 225a Level-0 table #599: 998739 bytes OK
+2022/10/24-10:27:44.069 225a Delete type=0 #589
+2022/10/24-10:27:44.326 22bc Compacting 1@1 + 7@2 files
+2022/10/24-10:27:44.374 22bc Generated table #600@1: 19531 keys, 2178956 bytes
+2022/10/24-10:27:44.435 22bc Generated table #601@1: 31631 keys, 2245695 bytes
+2022/10/24-10:27:44.504 22bc Generated table #602@1: 44025 keys, 2254096 bytes
+2022/10/24-10:27:44.559 22bc Generated table #603@1: 31323 keys, 2241249 bytes
+2022/10/24-10:27:44.621 22bc Generated table #604@1: 60719 keys, 2254500 bytes
+2022/10/24-10:27:44.697 22bc Generated table #605@1: 84304 keys, 2242169 bytes
+2022/10/24-10:27:44.723 22bc Generated table #606@1: 34509 keys, 790882 bytes
+2022/10/24-10:27:44.723 22bc Compacted 1@1 + 7@2 files => 14207547 bytes
+2022/10/24-10:27:44.724 22bc compacted to: files[ 0 0 7 0 0 0 0 ]
+2022/10/24-10:27:44.725 22bc Delete type=2 #591
+2022/10/24-10:27:44.725 22bc Delete type=2 #594
+2022/10/24-10:27:44.725 22bc Delete type=2 #599
+2022/10/24-10:27:44.725 22bc Delete type=2 #592
+2022/10/24-10:27:44.725 22bc Delete type=2 #593
+2022/10/24-10:27:44.725 22bc Delete type=2 #597
+2022/10/24-10:27:44.725 22bc Delete type=2 #595
+2022/10/24-10:27:44.725 22bc Delete type=2 #596
