@@ -3,14 +3,14 @@ const { Client , LocalAuth } = require('whatsapp-web.js');
 const sist = process.platform;
 let chromeRoute;
 if(sist === "linux"){
-  chromeRoute = "/usr/bin/google-chrome-stable";
+  chromeRoute = null;
 }else {
   chromeRoute = "resources\\app.asar.unpacked\\node_modules\\puppeteer\\.local-chromium\\win64-982053\\chrome-win\\chrome.exe";
 }
 const client = new Client({
   authStrategy: new LocalAuth({clientId: "client-Chrome",dataPath:"./"}),
   puppeteer: {
-    //headless: false,
+    headless: false,
     executablePath: chromeRoute,
   }
 });
@@ -61,6 +61,16 @@ ipcMain.on("comandChannel", async (event, args) => {
     const resp = await client.createGroup(name,[myWid]);
     createingScript = true;
     scriptId = resp.gid._serialized;
+    setTimeout(function() {
+      client.archiveChat(scriptId);
+      frameEvent.sender.send("responseChannel", {
+        code:"scriptCreated",
+        data:{
+          scriptId: scriptId,
+          name: name
+        }
+      });
+    },5000);
   }
   if(comand === "getScripts"){
     const chats = await client.getChats();
@@ -133,7 +143,9 @@ client.on('disconnected', (reason) => {
   frameEvent.sender.send("responseChannel", {code:"loggedOut"});
 });
 
+/*
 client.on('group_update', async (notification) => {
+  console.log("test");
   if (createingScript && scriptId === notification.chatId) {
     await client.archiveChat(notification.chatId);
     createingScript = false;
@@ -147,6 +159,7 @@ client.on('group_update', async (notification) => {
     });
   }
 });
+*/
 
 
 
