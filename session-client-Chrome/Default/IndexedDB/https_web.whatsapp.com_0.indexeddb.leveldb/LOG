@@ -1,45 +1,15 @@
-2022/10/24-10:25:43.998 225a Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/10/24-10:25:43.998 225a Recovering log #579
-2022/10/24-10:25:44.027 225a Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000579.log 
-2022/10/24-10:26:53.835 225a Level-0 table #590: started
-2022/10/24-10:26:53.862 225a Level-0 table #590: 1275277 bytes OK
-2022/10/24-10:26:53.865 225a Delete type=0 #579
-2022/10/24-10:26:57.525 22bc Compacting 1@1 + 7@2 files
-2022/10/24-10:26:57.571 22bc Generated table #591@1: 18593 keys, 2177350 bytes
-2022/10/24-10:26:57.627 22bc Generated table #592@1: 31946 keys, 2250008 bytes
-2022/10/24-10:26:57.697 22bc Generated table #593@1: 45016 keys, 2253535 bytes
-2022/10/24-10:26:57.755 22bc Generated table #594@1: 30158 keys, 2241994 bytes
-2022/10/24-10:26:57.826 22bc Generated table #595@1: 63894 keys, 2253631 bytes
-2022/10/24-10:26:57.893 22bc Generated table #596@1: 84439 keys, 2240226 bytes
-2022/10/24-10:26:57.916 22bc Generated table #597@1: 29252 keys, 669800 bytes
-2022/10/24-10:26:57.916 22bc Compacted 1@1 + 7@2 files => 14086544 bytes
-2022/10/24-10:26:57.917 22bc compacted to: files[ 0 0 7 0 0 0 0 ]
-2022/10/24-10:26:57.917 22bc Delete type=2 #582
-2022/10/24-10:26:57.917 22bc Delete type=2 #585
-2022/10/24-10:26:57.917 22bc Delete type=2 #583
-2022/10/24-10:26:57.917 22bc Delete type=2 #581
-2022/10/24-10:26:57.917 22bc Delete type=2 #590
-2022/10/24-10:26:57.917 22bc Delete type=2 #587
-2022/10/24-10:26:57.918 22bc Delete type=2 #584
-2022/10/24-10:26:57.918 22bc Delete type=2 #586
-2022/10/24-10:27:44.010 225a Level-0 table #599: started
-2022/10/24-10:27:44.059 225a Level-0 table #599: 998739 bytes OK
-2022/10/24-10:27:44.069 225a Delete type=0 #589
-2022/10/24-10:27:44.326 22bc Compacting 1@1 + 7@2 files
-2022/10/24-10:27:44.374 22bc Generated table #600@1: 19531 keys, 2178956 bytes
-2022/10/24-10:27:44.435 22bc Generated table #601@1: 31631 keys, 2245695 bytes
-2022/10/24-10:27:44.504 22bc Generated table #602@1: 44025 keys, 2254096 bytes
-2022/10/24-10:27:44.559 22bc Generated table #603@1: 31323 keys, 2241249 bytes
-2022/10/24-10:27:44.621 22bc Generated table #604@1: 60719 keys, 2254500 bytes
-2022/10/24-10:27:44.697 22bc Generated table #605@1: 84304 keys, 2242169 bytes
-2022/10/24-10:27:44.723 22bc Generated table #606@1: 34509 keys, 790882 bytes
-2022/10/24-10:27:44.723 22bc Compacted 1@1 + 7@2 files => 14207547 bytes
-2022/10/24-10:27:44.724 22bc compacted to: files[ 0 0 7 0 0 0 0 ]
-2022/10/24-10:27:44.725 22bc Delete type=2 #591
-2022/10/24-10:27:44.725 22bc Delete type=2 #594
-2022/10/24-10:27:44.725 22bc Delete type=2 #599
-2022/10/24-10:27:44.725 22bc Delete type=2 #592
-2022/10/24-10:27:44.725 22bc Delete type=2 #593
-2022/10/24-10:27:44.725 22bc Delete type=2 #597
-2022/10/24-10:27:44.725 22bc Delete type=2 #595
-2022/10/24-10:27:44.725 22bc Delete type=2 #596
+2022/10/27-15:04:25.618 59fa Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/27-15:04:25.618 59fa Recovering log #886
+2022/10/27-15:04:25.671 59fa Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000886.log 
+2022/10/27-15:04:45.651 59fb Level-0 table #896: started
+2022/10/27-15:04:45.674 59fb Level-0 table #896: 1088881 bytes OK
+2022/10/27-15:04:45.675 59fb Delete type=0 #886
+2022/10/27-15:04:45.684 5a02 Compacting 1@1 + 6@2 files
+2022/10/27-15:04:45.739 5a02 Generated table #897@1: 42585 keys, 2243890 bytes
+2022/10/27-15:04:45.774 5a02 Generated table #898@1: 20795 keys, 2178191 bytes
+2022/10/27-15:04:45.801 5a02 Generated table #899@1: 11155 keys, 2186201 bytes
+2022/10/27-15:04:45.838 5a02 Generated table #900@1: 21241 keys, 2198041 bytes
+2022/10/27-15:04:45.898 5a02 Generated table #901@1: 99412 keys, 2249219 bytes
+2022/10/27-15:04:45.907 5a02 Generated table #902@1: 13768 keys, 301039 bytes
+2022/10/27-15:04:45.907 5a02 Compacted 1@1 + 6@2 files => 11356581 bytes
+2022/10/27-15:04:45.908 5a02 compacted to: files[ 0 0 6 0 0 0 0 ]

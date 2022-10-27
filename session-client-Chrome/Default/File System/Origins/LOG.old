@@ -1,3 +1,2 @@
-2022/10/24-10:24:09.810 20be Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/Origins/MANIFEST-000001
-2022/10/24-10:24:09.810 20be Recovering log #3
-2022/10/24-10:24:09.811 20be Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/Origins/000003.log 
+2022/10/27-15:02:10.301 5654 Creating DB /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/Origins since it was missing.
+2022/10/27-15:02:10.306 5654 Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/Origins/MANIFEST-000001

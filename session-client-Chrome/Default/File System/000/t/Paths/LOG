@@ -1,4 +1,2 @@
-2022/10/23-17:20:50.086 252b Creating DB /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/000/t/Paths since it was missing.
-2022/10/23-17:20:50.090 252b Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/000/t/Paths/MANIFEST-000001
-2022/10/23-17:20:50.090 252b Recovering log #3
-2022/10/23-17:20:50.090 252b Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/000/t/Paths/000003.log 
+2022/10/27-15:04:26.446 59ff Creating DB /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/000/t/Paths since it was missing.
+2022/10/27-15:04:26.452 59ff Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/File System/000/t/Paths/MANIFEST-000001
