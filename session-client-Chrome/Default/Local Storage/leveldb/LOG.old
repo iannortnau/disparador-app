@@ -1,3 +1,6 @@
-2022/11/11-21:12:33.035 3056 Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/Local Storage/leveldb/MANIFEST-000001
-2022/11/11-21:12:33.035 3056 Recovering log #10
-2022/11/11-21:12:33.035 3056 Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/Local Storage/leveldb/000010.log 
+2022/11/15-15:17:01.246 1d6c Reusing MANIFEST /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2022/11/15-15:17:01.247 1d6c Recovering log #10
+2022/11/15-15:17:01.248 1d6c Reusing old log /home/iann/Projetos/Coletor-Disparador/disparador-app/session-client-Chrome/Default/Local Storage/leveldb/000010.log 
+2022/11/15-15:20:01.811 1e74 Level-0 table #14: started
+2022/11/15-15:20:01.814 1e74 Level-0 table #14: 21697 bytes OK
+2022/11/15-15:20:01.815 1e74 Delete type=0 #10

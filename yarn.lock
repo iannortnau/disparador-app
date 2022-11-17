@@ -5016,10 +5016,10 @@ webpack@5.74.0:
     watchpack "^2.4.0"
     webpack-sources "^3.2.3"
 
-whatsapp-web.js@1.18.3-alpha.0:
-  version "1.18.3-alpha.0"
-  resolved "https://registry.yarnpkg.com/whatsapp-web.js/-/whatsapp-web.js-1.18.3-alpha.0.tgz#410c6deb1095ef656ce9286a7fc93a92ffe15d71"
-  integrity sha512-0NtvVujELTPvnNveoU78st+eMXjo89UtL8KkqpMnG108fV0mMh6IBNMNVakAdtNG25H8rg9smLYOROWIromzww==
+whatsapp-web.js@^1.18.3:
+  version "1.18.3"
+  resolved "https://registry.yarnpkg.com/whatsapp-web.js/-/whatsapp-web.js-1.18.3.tgz#b0ac4d207f98f99acbd8d84c49e2f5c0f2f88466"
+  integrity sha512-MOCpk2l876kdraMRy+3gHeQKwIXGv14X/7lzI/dJDt0qppGGfwOPIQImjCgLn5nMPhf0SY4dK3YEo6ABSQ6sYg==
   dependencies:
     "@pedroslopez/moduleraid" "^5.0.2"
     fluent-ffmpeg "^2.1.2"
