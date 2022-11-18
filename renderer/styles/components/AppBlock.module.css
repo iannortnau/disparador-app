@@ -14,10 +14,6 @@
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     user-select: none;
 }
-.title{
-    font-size: 13px;
-    color: #5bdfe4;
-}
 .img{
     width: 80px;
 }

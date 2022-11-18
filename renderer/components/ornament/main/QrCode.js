@@ -9,11 +9,21 @@ import { GlobalContext } from '../../../context/GlobalContext';
 import { ipcRenderer } from 'electron';
 import Title from '../../structural/Title';
 import Line from '../../structural/Line';
+import TextSmall from '../../structural/TextSmall';
 
-export default function QrCode(props){
+export default function QrCode(){
   const {
     qr,
+    loadMessage,
+    setLoadMessage
   } = useContext(GlobalContext);
+
+  useEffect(()=>{
+    return ()=>{
+      setLoadMessage("");
+    }
+  },[])
+
 
   useEffect(() => {
     start();
@@ -48,6 +58,7 @@ export default function QrCode(props){
             />
             <Title>Iniciando WhatsApp</Title>
             <Loader/>
+            <TextSmall>{loadMessage}</TextSmall>
           </>
         }
       </Block>

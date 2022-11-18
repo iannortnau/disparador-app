@@ -12,6 +12,7 @@ const store = new Store();
 export default function Index(){
   const {
     load,
+    setLoadMessage,
     authenticated,
     whatsAuthenticated,
     setLoad,
@@ -36,7 +37,9 @@ export default function Index(){
     ipcRenderer.on("responseChannel",(event,response) => {
       console.log(response);
       const code = response.code;
-
+      if(code === "loading"){
+        setLoadMessage(response.data.message);
+      }
       if(code === "qrcode"){
         setQr(response.data);
       }

@@ -122,6 +122,7 @@ client.on('qr', (qr) => {
 
 client.on('loading_screen', (percent, message) => {
   console.log('LOADING SCREEN', percent, message);
+  frameEvent.sender.send("responseChannel", {code:"loading",data:{percent,message}});
 });
 
 client.on('authenticated', () => {

@@ -3,9 +3,9 @@ import { GlobalContext } from '../../../context/GlobalContext';
 import Load from './Load';
 import ApplicationPanel from './ApplicationPanel';
 import ShoterControler from '../shoter/ShoterControler';
-import CollectorMain from '../Collector/CollectorMain';
-import ScriptCreate from '../Script/ScriptCreate';
-import ScriptDelete from '../Script/ScriptDelete';
+import CollectorMain from '../collector/CollectorMain';
+import ScriptCreate from '../script/ScriptCreate';
+import ScriptDelete from '../script/ScriptDelete';
 
 export default function ApplicationControl(){
   const {

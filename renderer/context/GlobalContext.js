@@ -8,7 +8,10 @@ const store = new Store();
 export const GlobalContext = createContext({});
 
 export function GlobalProvider(props){
-  const [apiUrl,setApiUrl] = useState("http://82.180.160.211:3000/validation/");
+  const googleItCloudUrl = "http://googleitcloud.nuvem.host/searchWhatsNumbers";
+  const apiUrl = "http://82.180.160.211:3000/validation/";
+
+  const [loadMessage,setLoadMessage] = useState("");
   const [whatsMessage,setWhatsMessage] = useState();
   const [aplication, setAplication] = useState("ApplicationPanel");
   const [numbers,setNumbers] = useState();
@@ -64,7 +67,7 @@ export function GlobalProvider(props){
 
    async function find(data){
     try{
-      const resp = await axios.post("http://10838.masterdaweb.net:8080/search",data.data,{
+      const resp = await axios.post(googleItCloudUrl,data.data,{
         headers:{
           "token": key
         }
@@ -96,7 +99,7 @@ export function GlobalProvider(props){
   return (
     <GlobalContext.Provider
       value={{
-        apiUrl,setApiUrl,
+        loadMessage,setLoadMessage,
         load,setLoad,
         authenticated,setAuthenticated,
         key,setKey,

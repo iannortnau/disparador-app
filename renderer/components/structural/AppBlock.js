@@ -2,6 +2,7 @@ import styles from "../../styles/components/AppBlock.module.css";
 import Image from 'next/image';
 import { useContext } from 'react';
 import { GlobalContext } from '../../context/GlobalContext';
+import TextSmall from './TextSmall';
 
 
 
@@ -23,7 +24,7 @@ export default function AppBlock(props){
         width={56}
         height={56}
       />
-      <h1 className={styles.title}>{props.title}</h1>
+      <TextSmall>{props.title}</TextSmall>
     </div>
   );
 }
