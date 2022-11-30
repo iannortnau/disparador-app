@@ -1,11 +1,17 @@
 const { ipcMain } = require('electron');
 const { Client , LocalAuth } = require('whatsapp-web.js');
+const localChrome = require('local-chrome');
 const sist = process.platform;
 let chromeRoute;
+
 if(sist === "linux"){
   chromeRoute = null;
 }else {
-  chromeRoute = "resources\\app.asar.unpacked\\node_modules\\puppeteer\\.local-chromium\\win64-982053\\chrome-win\\chrome.exe";
+  if(localChrome){
+    chromeRoute = localChrome;
+  }else {
+    chromeRoute = "resources\\app.asar.unpacked\\node_modules\\puppeteer\\.local-chromium\\win64-982053\\chrome-win\\chrome.exe";
+  }
 }
 const client = new Client({
   authStrategy: new LocalAuth({clientId: "client-Chrome",dataPath:"./"}),
