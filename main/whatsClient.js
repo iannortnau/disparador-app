@@ -5,7 +5,11 @@ const sist = process.platform;
 let chromeRoute;
 
 if(sist === "linux"){
-  chromeRoute = null;
+  if(localChrome){
+    chromeRoute = localChrome;
+  }else {
+    chromeRoute = null;
+  }
 }else {
   if(localChrome){
     chromeRoute = localChrome;
