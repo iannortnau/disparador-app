@@ -3,7 +3,8 @@
   "name": "disparador-app",
   "description": "My application description",
   "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "author": "Iann Ortnau <ortnau.iann@gmail.com>",
+  "repository": "https://github.com/iannortnau/disparador-app",
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
