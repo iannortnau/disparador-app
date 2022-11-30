@@ -12,7 +12,7 @@
     "build": "nextron build",
     "build:all": "nextron build --all",
     "build:win32": "nextron build --win --ia32",
-    "build:win64": "nextron build --win --x64 -p always",
+    "build:win64": "nextron build --win --x64",
     "build:mac": "nextron build --mac --x64",
     "build:linux": "nextron build --linux"
   },

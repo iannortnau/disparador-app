@@ -11,6 +11,7 @@ import Title from '../../structural/Title';
 import Select from 'react-select';
 import Line from '../../structural/Line';
 import ScriptSelector from '../../structural/ScriptSelector';
+import TextSmall from '../../structural/TextSmall';
 
 
 
@@ -21,8 +22,6 @@ export default function ScriptCreate(){
   } = useContext(GlobalContext);
 
   const [name, setName] = useState("");
-  const [script, setScript] = useState();
-  const [messages, setMessages] = useState();
 
   function createScript(){
     setLoad(true);
@@ -34,35 +33,6 @@ export default function ScriptCreate(){
     }
     ipcRenderer.send("comandChannel",args)
   }
-
-  function deleteScript(){
-    setLoad(true);
-    const args = {
-      comand: "deleteScript",
-      data:{
-        id:script.value
-      }
-    }
-    ipcRenderer.send("comandChannel",args)
-  }
-
-  function getScriptMessages(id){
-    const args = {
-      comand: "getScriptMessages",
-      data:{
-        id
-      }
-    }
-    ipcRenderer.send("comandChannel",args);
-
-    ipcRenderer.once("comandChannel",function(event, args) {
-      setMessages(null);
-      setMessages(args);
-      console.log(args);
-    });
-  }
-
-
 
   return (
     <Page>
@@ -92,6 +62,18 @@ export default function ScriptCreate(){
             setAplication("ApplicationPanel");
           }}
         />
+      </Block>
+      <Block
+        style={{marginTop:20}}
+      >
+        <Title
+          style={{margin:0,marginTop:10}}
+        >
+          ATENÇÃO
+        </Title>
+        <TextSmall>
+          Isso criará um grupo arquivado com o prefixo !ROTEIRO! seguido pelo nome do roteiro que você criou, nesse grupo você deve colocar as mensagens, imagens e áudios na forma e ordem que desejar, ao usar esse roteiro no Disparador, as mensagens serão enviadas no mesmo formato e ordem do Roteiro(Grupo) selecionado.
+        </TextSmall>
       </Block>
 
     </Page>
