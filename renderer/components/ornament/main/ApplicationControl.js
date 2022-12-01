@@ -6,6 +6,7 @@ import ShoterControler from '../shoter/ShoterControler';
 import CollectorMain from '../collector/CollectorMain';
 import ScriptCreate from '../script/ScriptCreate';
 import ScriptDelete from '../script/ScriptDelete';
+import Uploader from '../uploader/Uploader';
 
 export default function ApplicationControl(){
   const {
@@ -28,6 +29,9 @@ export default function ApplicationControl(){
       }
       {aplication === "ScriptDelete"&&
         <ScriptDelete/>
+      }
+      {aplication === "Uploader"&&
+        <Uploader/>
       }
     </>
   );

@@ -71,17 +71,6 @@ ipcMain.on("comandChannel", async (event, args) => {
     const resp = await client.createGroup(name,[myWid]);
     createingScript = true;
     scriptId = resp.gid._serialized;
-    /*
-    setTimeout(function() {
-      client.archiveChat(scriptId);
-      frameEvent.sender.send("responseChannel", {
-        code:"scriptCreated",
-        data:{
-          scriptId: scriptId,
-          name: name
-        }
-      });
-    },5000);*/
   }
   if(comand === "getScripts"){
     const chats = await client.getChats();
@@ -157,7 +146,6 @@ client.on('disconnected', (reason) => {
 
 
 client.on('group_update', async (notification) => {
-  console.log("test");
   if (createingScript && scriptId === notification.chatId) {
     await client.archiveChat(notification.chatId);
     createingScript = false;

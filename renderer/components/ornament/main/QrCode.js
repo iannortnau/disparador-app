@@ -18,15 +18,11 @@ export default function QrCode(){
     setLoadMessage
   } = useContext(GlobalContext);
 
-  useEffect(()=>{
+  useEffect(() => {
+    start();
     return ()=>{
       setLoadMessage("");
     }
-  },[])
-
-
-  useEffect(() => {
-    start();
   }, []);
 
   async function start(){

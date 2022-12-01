@@ -1,9 +1,10 @@
 import Page from "../../structural/Page";
 import Block from "../../structural/Block";
-import img from "../../../public/Post de tecnologia cortado.png"
-import imgDisparador from "../../../public/icons8-enviar-e-mail-em-massa-96.png"
-import imgColetor from "../../../public/icons8-pesquisar-128.png"
-import imgRoteiro from "../../../public/icons8-chat-64.png"
+import img from "../../../public/Post de tecnologia cortado.png";
+import imgDisparador from "../../../public/icons8-enviar-e-mail-em-massa-96.png";
+import imgColetor from "../../../public/icons8-pesquisar-128.png";
+import imgRoteiro from "../../../public/icons8-chat-64.png";
+import imgUploader from "../../../public/icons8-fazer-upload-64.png";
 import Image from "next/image";
 import AppGrid from '../../structural/AppGrid';
 import AppBlock from '../../structural/AppBlock';
@@ -46,6 +47,11 @@ export default function ApplicationPanel(){
           img={imgRoteiro}
           title={"Deletar Roteiros"}
           page={"ScriptDelete"}
+        />
+        <AppBlock
+          img={imgUploader}
+          title={"Criar Midia"}
+          page={"Uploader"}
         />
       </AppGrid>
       <Button

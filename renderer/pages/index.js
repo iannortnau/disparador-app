@@ -21,11 +21,13 @@ export default function Index(){
     setWhatsAuthenticated,
     setWhatsReady,
     getScripts,
-    setMessage
+    setMessage,
+    initialMediaFileCheck
   } = useContext(GlobalContext);
 
   useEffect(() => {
     //store.delete("key");
+    initialMediaFileCheck();
     resp();
     login();
     return () => {

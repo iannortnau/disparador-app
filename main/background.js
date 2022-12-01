@@ -2,6 +2,7 @@ import { app } from 'electron';
 import serve from 'electron-serve';
 import { createWindow } from './helpers';
 require("./whatsClient");
+require("./filesClient");
 require('update-electron-app')();
 
 const isProd = process.env.NODE_ENV === 'production';
