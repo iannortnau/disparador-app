@@ -1,16 +1,10 @@
-import Page from "../../structural/Page";
-import Block from "../../structural/Block";
-import img from "../../../public/Post de tecnologia cortado.png";
-import Image from "next/image";
+
 import Button from "../../structural/Button";
 import { useContext, useEffect, useState } from 'react';
 import {GlobalContext} from "../../../context/GlobalContext";
-import Title from "../../structural/Title";
 import Select from 'react-select';
 import Line from '../../structural/Line';
-import TextInput from '../../structural/TextInput';
 import { ipcRenderer } from 'electron';
-import * as readline from 'readline';
 
 
 
@@ -56,16 +50,19 @@ export default function UploaderMidiaSearch(props){
 
 
   async function search(){
-
     let comand;
     switch (midiaType.value) {
       case 0:
         comand = "audioSearch";
+        break;
       case 1:
         comand = "videoSearch";
+        break;
       case 2:
         comand = "imageSearch";
+        break;
     }
+    console.log(comand);
     const args = {
       comand: comand,
     }
@@ -84,7 +81,7 @@ export default function UploaderMidiaSearch(props){
         }}
       >
         <Select
-          placeholder={"Tipo de Midia"}
+          placeholder={"Tipo de Mídia"}
           options={options}
           onChange={(value)=>{
             setMidiaType(value);
@@ -108,7 +105,7 @@ export default function UploaderMidiaSearch(props){
           value={"ESCOLHER"}
           onClick={function(){
             setMessage({
-              text:"Escolha um tipo de Midia",
+              text:"Escolha um tipo de Mídia",
               bgColor:"red",
               txColor:"white"
             });

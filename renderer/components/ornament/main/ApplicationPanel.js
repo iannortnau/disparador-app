@@ -50,7 +50,7 @@ export default function ApplicationPanel(){
         />
         <AppBlock
           img={imgUploader}
-          title={"Criar Midia"}
+          title={"Criar Mídia"}
           page={"Uploader"}
         />
       </AppGrid>

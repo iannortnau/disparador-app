@@ -13,6 +13,8 @@ import { ipcRenderer } from 'electron';
 import * as readline from 'readline';
 import UploaderMidiaSearch from './UploaderMidiaSearch';
 import UploaderImageViewer from './UploaderImageViewer';
+import UploaderAudioViewer from './UploaderAudioViewer';
+import UploaderVideoViewer from './UploaderVideoViewer';
 
 
 
@@ -30,7 +32,7 @@ export default function Uploader(){
       <Block>
         <Image src={img}/>
 
-        <Title style={{ margin:8 }}>Criar Midia</Title>
+        <Title style={{ margin:8 }}>Criar Mídia</Title>
 
         {!midiaRoute&&
           <UploaderMidiaSearch
@@ -39,9 +41,24 @@ export default function Uploader(){
           />
         }
 
+        {midiaRoute && midiaType.value === 0 &&
+          <UploaderAudioViewer
+            midiaRoute={midiaRoute}
+            setMidiaRoutte={setMidiaRoute}
+          />
+        }
+
+        {midiaRoute && midiaType.value === 1 &&
+          <UploaderVideoViewer
+            midiaRoute={midiaRoute}
+            setMidiaRoutte={setMidiaRoute}
+          />
+        }
+
         {midiaRoute && midiaType.value === 2 &&
           <UploaderImageViewer
             midiaRoute={midiaRoute}
+            setMidiaRoutte={setMidiaRoute}
           />
         }
 

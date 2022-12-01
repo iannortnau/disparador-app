@@ -8,14 +8,38 @@ ipcMain.on("fileChannel", async (event, args) => {
   const comand = args.comand;
   const data = args.data;
 
+  console.log(comand);
+
   if(comand === "imageSearch"){
-    let imageRoute = dialog.showSaveDialogSync({
+    let route = dialog.showSaveDialogSync({
       properties: ["openFile"],
       filters: [{ name: 'Images', extensions: ['jpg', 'png'] }]
     });
 
-    if(imageRoute !== undefined){
-      event.sender.send("fileChannel",imageRoute);
+    if(route !== undefined){
+      event.sender.send("fileChannel",route);
+    }
+  }
+
+  if(comand === "videoSearch"){
+    let route = dialog.showSaveDialogSync({
+      properties: ["openFile"],
+      filters: [{ name: 'Videos', extensions: ["mp4", "avi", "mkv", "mov", "flv", "3gp"] }]
+    });
+
+    if(route !== undefined){
+      event.sender.send("fileChannel",route);
+    }
+  }
+
+  if(comand === "audioSearch"){
+    let route = dialog.showSaveDialogSync({
+      properties: ["openFile"],
+      filters: [{ name: 'Áudios', extensions: ["mp3"] }]
+    });
+
+    if(route !== undefined){
+      event.sender.send("fileChannel",route);
     }
   }
 });

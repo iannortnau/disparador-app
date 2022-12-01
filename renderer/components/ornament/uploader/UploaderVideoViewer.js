@@ -1,13 +1,13 @@
-import Image from "next/image";
 import TextSmall from '../../structural/TextSmall';
 import { useContext, useState } from 'react';
 import TextInput from '../../structural/TextInput';
 import Button from '../../structural/Button';
 import { GlobalContext } from '../../../context/GlobalContext';
+import ReactPlayer from 'react-player';
 
 
 
-export default function UploaderImageViewer(props){
+export default function UploaderVideoViewer(props){
   const {
     addMidiaToMap,
     setMessage
@@ -17,7 +17,7 @@ export default function UploaderImageViewer(props){
 
   async function save(){
     if(midiaName.length > 0){
-      addMidiaToMap(midiaRoute,midiaName,"image");
+      addMidiaToMap(midiaRoute,midiaName,"video");
       props.setMidiaRoutte(null);
     }else {
       setMessage({
@@ -36,10 +36,11 @@ export default function UploaderImageViewer(props){
         Visualização Prévia
       </TextSmall>
 
-      <Image
-        src={"file://"+midiaRoute}
+      <ReactPlayer
+        url={"file://"+midiaRoute}
         width={300}
-        height={300}
+        height={200}
+        controls
       />
 
       <TextInput

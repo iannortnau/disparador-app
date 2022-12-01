@@ -25,7 +25,7 @@ export function GlobalProvider(props){
     type: ""
   }
 
-
+  const [midiaFileMap, setMidiaFileMap] = useState({images: [], audios: [], videos: []});
   const [loadMessage,setLoadMessage] = useState("");
   const [whatsMessage,setWhatsMessage] = useState();
   const [aplication, setAplication] = useState("ApplicationPanel");
@@ -146,6 +146,55 @@ export function GlobalProvider(props){
   }
 
   function loadMidiaMap() {
+    const midiaFileMapText = fs.readFileSync(midiaFileMapRoute);
+    const midiaFIleMapJson = JSON.parse(midiaFileMapText);
+
+    console.log(midiaFIleMapJson);
+    setMidiaFileMap(midiaFIleMapJson);
+  }
+
+  function attMidiaFileMap(auxMidiaFileMap){
+    setMessage({
+      text:"Midias atualizadas",
+      bgColor:"green",
+      txColor:"white"
+    })
+    fs.writeFileSync(midiaFileMapRoute,JSON.stringify(auxMidiaFileMap));
+    loadMidiaMap();
+  }
+
+  async function addMidiaToMap(route, name, type) {
+    const midiaItem = midiaItemBaseStructure;
+
+    midiaItem.id = new Date().getTime();
+    midiaItem.name = name;
+    midiaItem.type = type;
+
+    const fileType = await fileTypeFromFile(route);
+    const detinationRoute = `/${midiaItem.id}.${fileType.ext}`;
+
+    const auxMidiaFileMap = midiaFileMap;
+
+    if (type === "image") {
+      fs.copyFileSync(route,midiaFileRouteImages+detinationRoute);
+      midiaItem.route = midiaFileRouteImages+detinationRoute;
+      auxMidiaFileMap.images.push(midiaItem);
+    }
+    if (type === "audio") {
+      fs.copyFileSync(route,midiaFileRouteAudios+detinationRoute);
+      midiaItem.route = midiaFileRouteAudios+detinationRoute;
+      auxMidiaFileMap.audios.push(midiaItem);
+    }
+    if (type === "video") {
+      fs.copyFileSync(route,midiaFileRouteVideos+detinationRoute);
+      midiaItem.route = midiaFileRouteVideos+detinationRoute;
+      auxMidiaFileMap.videos.push(midiaItem);
+    }
+
+    attMidiaFileMap(auxMidiaFileMap);
+  }
+
+  function removeMidiaFromMap(id,type){
 
   }
 
@@ -178,7 +227,8 @@ export function GlobalProvider(props){
         validateKey,
         find,
         getScripts,
-        initialMediaFileCheck
+        initialMediaFileCheck,
+        addMidiaToMap
       }}>
       {props.children}
     </GlobalContext.Provider>
