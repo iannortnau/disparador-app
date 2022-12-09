@@ -207,6 +207,7 @@ export function GlobalProvider(props){
         midiaFileRouteAudios,
         midiaFileRouteVideos,
         midiaFileMapRoute,
+        midiaFileMap,setMidiaFileMap,
         loadMessage,setLoadMessage,
         load,setLoad,
         authenticated,setAuthenticated,

@@ -7,6 +7,7 @@ import CollectorMain from '../collector/CollectorMain';
 import ScriptCreate from '../script/ScriptCreate';
 import ScriptDelete from '../script/ScriptDelete';
 import Uploader from '../uploader/Uploader';
+import Remover from '../remover/Remover';
 
 export default function ApplicationControl(){
   const {
@@ -32,6 +33,9 @@ export default function ApplicationControl(){
       }
       {aplication === "Uploader"&&
         <Uploader/>
+      }
+      {aplication === "Remover"&&
+        <Remover/>
       }
     </>
   );

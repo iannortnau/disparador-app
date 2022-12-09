@@ -53,6 +53,11 @@ export default function ApplicationPanel(){
           title={"Criar Mídia"}
           page={"Uploader"}
         />
+        <AppBlock
+          img={imgUploader}
+          title={"Deletar Mídia"}
+          page={"Remover"}
+        />
       </AppGrid>
       <Button
         style={{

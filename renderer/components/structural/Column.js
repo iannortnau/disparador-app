@@ -1,8 +1,8 @@
-import styles from "../../styles/components/Line.module.css";
+import styles from "../../styles/components/Column.module.css";
 
 
 
-export default function Line(props){
+export default function Column(props){
 
     return (
         <div
