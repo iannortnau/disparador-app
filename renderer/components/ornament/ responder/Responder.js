@@ -8,15 +8,18 @@ import {GlobalContext} from "../../../context/GlobalContext";
 import Title from "../../structural/Title";
 import MidiaSelector from '../../structural/midiaSelector/MidiaSelector';
 import MidiaLineShower from '../../structural/MidiaLineShower';
+import TextSmall from '../../structural/TextSmall';
+import ChatSelector from '../../structural/chatSelector/ChatSelector';
 
 
-export default function Remover(){
+export default function Responder(){
   const {
     setAplication,
     removeMidiaFromMap,
     setLoad
   } = useContext(GlobalContext);
   const [midia, setMidia] = useState(null);
+  const [chat, setChat] = useState(null);
 
   function deleta(){
     setLoad(true);
@@ -31,14 +34,14 @@ export default function Remover(){
       <Block>
         <Image src={img}/>
 
-        <Title style={{ margin:8 }}>Deletar Mídia</Title>
+        <Title style={{ margin:8 }}>Responder Contato</Title>
 
-        {!midia&&
-          <MidiaSelector
-            setMidia={setMidia}
+        {!chat&&
+          <ChatSelector
+            setChat={setMidia}
           />
         }
-        {midia&&
+        {chat&&
           <>
             <MidiaLineShower
               item={midia}
@@ -50,14 +53,37 @@ export default function Remover(){
             />
           </>
         }
+
+        {!midia&&
+          <MidiaSelector
+            setMidia={setMidia}
+          />
+        }
+        {midia&&
+          <>
+            <TextSmall
+              style={{
+                fontSize:18,
+                margin:5
+            }}
+            >
+              Mídia Escolhida
+            </TextSmall>
+            <MidiaLineShower
+              item={midia}
+              setMidia={setMidia}
+            />
+          </>
+
+        }
         <Button
           style={{
             backgroundColor:"rgba(86,16,16,0.71)"
           }}
           value={"VOLTAR"}
           onClick={function(){
-              setAplication("ApplicationPanel");
-            }
+            setAplication("ApplicationPanel");
+          }
           }
         />
       </Block>

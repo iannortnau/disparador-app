@@ -2,18 +2,17 @@ import TextSmall from '../TextSmall';
 import { useContext, useEffect, useState } from 'react';
 import Select from 'react-select';
 import Line from '../Line';
-import MidiaShower from './MidiaShower';
 import { GlobalContext } from '../../../context/GlobalContext';
+import ChatShower from './ChatShower';
+import { ipcRenderer } from 'electron';
 
-export default function MidiaSelector(props){
+export default function ChatSelector(props){
   const {
-    midiaFileMap
   } = useContext(GlobalContext);
   const options = [
     { value: -1, label: 'Todos' },
-    { value: 0, label: 'Áudio' },
-    { value: 1, label: 'Vídeo' },
-    { value: 2, label: 'Imagem' }
+    { value: 0, label: 'Lidas' },
+    { value: 1, label: 'Não Lidas' },
   ]
   const customStyles = {
     control: (base, state) => ({
@@ -44,34 +43,24 @@ export default function MidiaSelector(props){
       width:"299px"
     }),
   }
-  const [midiaType, setMidiaType] = useState();
+  const [chatType, setChatType] = useState();
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    if(midiaType !== undefined){
+    if(chatType !== undefined){
       getMidiaData();
     }
-  }, [midiaType]);
+  }, [chatType]);
 
   function getMidiaData(){
-    setData([]);
-    console.log(midiaFileMap);
-    if(midiaType.value === -1){
-      let auxMidiaMap = [];
-      auxMidiaMap = auxMidiaMap.concat(midiaFileMap.images);
-      auxMidiaMap = auxMidiaMap.concat(midiaFileMap.audios);
-      auxMidiaMap = auxMidiaMap.concat(midiaFileMap.videos);
-      setData(auxMidiaMap);
+    const args = {
+      comand: "getContacts",
     }
-    if(midiaType.value === 0){
-      setData(midiaFileMap.audios);
-    }
-    if(midiaType.value === 1){
-      setData(midiaFileMap.videos);
-    }
-    if(midiaType.value === 2){
-      setData(midiaFileMap.images);
-    }
+    ipcRenderer.send("comandChannel",args);
+
+    ipcRenderer.once("comandChannel",(event,args)=>{
+      console.log(args);
+    });
   }
 
   return(
@@ -79,7 +68,7 @@ export default function MidiaSelector(props){
       <TextSmall
         style={{fontSize:18}}
       >
-        Escolha a Mídia
+        Escolha a Conversa
       </TextSmall>
 
       <Line>
@@ -87,15 +76,15 @@ export default function MidiaSelector(props){
           placeholder={"Tipo de Mídia"}
           options={options}
           onChange={(value)=>{
-            setMidiaType(value);
+            setChatType(value);
           }}
           styles={customStyles}
         />
       </Line>
 
-      <MidiaShower
+      <ChatShower
         data={data}
-        setMidia={props.setMidia}
+        setChat={props.setChat}
       />
     </>
   );

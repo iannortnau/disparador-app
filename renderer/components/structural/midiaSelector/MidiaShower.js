@@ -9,7 +9,7 @@ import MidiaDisplay from './MidiaDisplay';
 
 export default function MidiaShower(props){
   const [midia, setMidia] = useState(null);
-  const midiaData = props.data;
+  const midiaData = props.data||[];
 
   useEffect(() => {
     setMidia(null);
@@ -36,6 +36,7 @@ export default function MidiaShower(props){
               if(item.type === "video"){
                 return (
                   <MidiaItemVideo
+                    key={item.id}
                     item={item}
                     setMidia={(item)=>{
                       setMidia(item)
@@ -46,6 +47,7 @@ export default function MidiaShower(props){
               if(item.type === "audio"){
                 return (
                   <MidiaItemAudio
+                    key={item.id}
                     item={item}
                     setMidia={(item)=>{
                       setMidia(item)
@@ -56,6 +58,7 @@ export default function MidiaShower(props){
               if(item.type === "image"){
                 return (
                   <MidiaItemImage
+                    key={item.id}
                     item={item}
                     setMidia={(item)=>{
                       setMidia(item)

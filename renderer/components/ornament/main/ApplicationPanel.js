@@ -5,6 +5,7 @@ import imgDisparador from "../../../public/icons8-enviar-e-mail-em-massa-96.png"
 import imgColetor from "../../../public/icons8-pesquisar-128.png";
 import imgRoteiro from "../../../public/icons8-chat-64.png";
 import imgUploader from "../../../public/icons8-fazer-upload-64.png";
+import imgResponder from "../../../public/icons8-send-58.png";
 import Image from "next/image";
 import AppGrid from '../../structural/AppGrid';
 import AppBlock from '../../structural/AppBlock';
@@ -57,6 +58,11 @@ export default function ApplicationPanel(){
           img={imgUploader}
           title={"Deletar Mídia"}
           page={"Remover"}
+        />
+        <AppBlock
+          img={imgResponder}
+          title={"Responder"}
+          page={"Responder"}
         />
       </AppGrid>
       <Button

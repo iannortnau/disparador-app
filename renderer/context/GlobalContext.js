@@ -146,11 +146,13 @@ export function GlobalProvider(props){
   }
 
   function loadMidiaMap() {
-    const midiaFileMapText = fs.readFileSync(midiaFileMapRoute);
+    const midiaFileMapText = fs.readFileSync(midiaFileMapRoute, 'utf8');
     const midiaFIleMapJson = JSON.parse(midiaFileMapText);
 
-    console.log(midiaFIleMapJson);
     setMidiaFileMap(midiaFIleMapJson);
+    setTimeout(()=>{
+      setLoad(false);
+    },2000);
   }
 
   function attMidiaFileMap(auxMidiaFileMap){
@@ -194,8 +196,58 @@ export function GlobalProvider(props){
     attMidiaFileMap(auxMidiaFileMap);
   }
 
-  function removeMidiaFromMap(id,type){
+  function removeMidiaFromMap(midia){
+    fs.rmSync(midia.route);
 
+    let auxMidiaFileMap = midiaFileMap;
+
+    console.log(midia);
+
+    if(midia.type === "audio"){
+      for (let i = 0; i < midiaFileMap.audios.length; i++) {
+        const item = midiaFileMap.audios[i];
+        if(item.id === midia.id){
+          if(midiaFileMap.audios.length===1){
+            auxMidiaFileMap.audios = [];
+          }else {
+            auxMidiaFileMap.audios = midiaFileMap.audios.slice(i,1);
+          }
+          break;
+        }
+      }
+    }
+    if(midia.type === "video"){
+      for (let i = 0; i < midiaFileMap.videos.length; i++) {
+        const item = midiaFileMap.videos[i];
+        console.log(midia.id);
+        if(item.id === midia.id){
+          if(midiaFileMap.videos.length===1){
+            auxMidiaFileMap.videos = [];
+          }else {
+            auxMidiaFileMap.videos = midiaFileMap.videos.slice(i,1);
+          }
+          break;
+        }
+      }
+
+    }
+    if(midia.type === "image"){
+      for (let i = 0; i < midiaFileMap.images.length; i++) {
+        const item = midiaFileMap.images[i];
+        console.log(midia.id);
+        if(item.id === midia.id){
+          if(midiaFileMap.images.length===1){
+            auxMidiaFileMap.images = [];
+          }else {
+            auxMidiaFileMap.images = midiaFileMap.images.slice(i,1);
+          }
+          break;
+        }
+      }
+
+    }
+
+    attMidiaFileMap(auxMidiaFileMap);
   }
 
   return (
@@ -229,7 +281,8 @@ export function GlobalProvider(props){
         find,
         getScripts,
         initialMediaFileCheck,
-        addMidiaToMap
+        addMidiaToMap,
+        removeMidiaFromMap
       }}>
       {props.children}
     </GlobalContext.Provider>

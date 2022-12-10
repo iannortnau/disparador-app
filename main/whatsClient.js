@@ -110,6 +110,22 @@ ipcMain.on("comandChannel", async (event, args) => {
     }
     event.sender.send("comandChannel",messages);
   }
+
+  if(comand === "getContacts"){
+    const chats = await client.getContacts();
+    const chatResp = [];
+    console.log(chats);
+    for (let i = 0; i < chats.length; i++) {
+      const chat = chats[i];
+      if(chat.isUser){
+        if(!chat.name){
+          chat.name = chat.number;
+        }
+        chatResp.push(chat);
+      }
+    }
+    event.sender.send("comandChannel",chatResp);
+  }
 });
 
 //Controle de eventos do whats

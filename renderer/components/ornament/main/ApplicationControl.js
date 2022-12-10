@@ -8,6 +8,7 @@ import ScriptCreate from '../script/ScriptCreate';
 import ScriptDelete from '../script/ScriptDelete';
 import Uploader from '../uploader/Uploader';
 import Remover from '../remover/Remover';
+import Responder from '../ responder/Responder';
 
 export default function ApplicationControl(){
   const {
@@ -36,6 +37,9 @@ export default function ApplicationControl(){
       }
       {aplication === "Remover"&&
         <Remover/>
+      }
+      {aplication === "Responder"&&
+        <Responder/>
       }
     </>
   );

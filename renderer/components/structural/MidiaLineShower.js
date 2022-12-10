@@ -8,6 +8,7 @@ import Image from 'next/image';
 import imgImage from '../../public/icons8-fotografia-30.png';
 import imgAudio from '../../public/icons8-volume-alto-50.png';
 import imgVideo from '../../public/icons8-video-clip-48.png';
+import imgX from '../../public/icons8-xbox-x-48.png';
 
 export default function MidiaLineShower(props){
   const item = props.item;
@@ -25,13 +26,12 @@ export default function MidiaLineShower(props){
           <Line
             style={{
               width:"98%",
-              paddingLeft:20,
-              paddingRight:20
+              padding:5,
             }}
           >
             <Image
               src={imgAudio}
-              width={28}
+              width={40}
               height={28}
             />
             <TextSmall
@@ -39,20 +39,27 @@ export default function MidiaLineShower(props){
             >
               {name}
             </TextSmall>
+            <Image
+              src={imgX}
+              width={40}
+              height={28}
+              onClick={()=>{
+                props.setMidia(null);
+              }}
+            />
           </Line>
         }
         {type==="video"&&
           <Line
             style={{
               width:"98%",
-              paddingLeft:20,
-              paddingRight:20
+              padding:5,
 
             }}
           >
             <Image
               src={imgVideo}
-              width={28}
+              width={40}
               height={28}
             />
             <TextSmall
@@ -60,20 +67,27 @@ export default function MidiaLineShower(props){
             >
               {name}
             </TextSmall>
+            <Image
+              src={imgX}
+              width={40}
+              height={28}
+              onClick={()=>{
+                props.setMidia(null);
+              }}
+            />
           </Line>
         }
         {type==="image"&&
           <Line
             style={{
               width:"98%",
-              paddingLeft:20,
-              paddingRight:20
+              paddingLeft:5
 
             }}
           >
             <Image
               src={imgImage}
-              width={28}
+              width={40}
               height={28}
             />
             <TextSmall
@@ -81,6 +95,14 @@ export default function MidiaLineShower(props){
             >
               {name}
             </TextSmall>
+            <Image
+              src={imgX}
+              width={40}
+              height={28}
+              onClick={()=>{
+                props.setMidia(null);
+              }}
+            />
           </Line>
         }
       </div>
