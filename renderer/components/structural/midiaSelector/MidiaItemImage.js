@@ -15,7 +15,8 @@ export default function MidiaItemImage(props){
         paddingRight:20,
         borderBottomWidth: 1,
         borderBottomStyle: "solid",
-        borderColor: "#477f81"
+        borderColor: "#477f81",
+        userSelect: "none"
 
       }}
       onClick={()=>{

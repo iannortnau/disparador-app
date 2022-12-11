@@ -10,6 +10,7 @@ import MidiaSelector from '../../structural/midiaSelector/MidiaSelector';
 import MidiaLineShower from '../../structural/MidiaLineShower';
 import TextSmall from '../../structural/TextSmall';
 import ChatSelector from '../../structural/chatSelector/ChatSelector';
+import ChatBlockShower from '../../structural/chatSelector/ChatBlockShower';
 
 
 export default function Responder(){
@@ -38,14 +39,14 @@ export default function Responder(){
 
         {!chat&&
           <ChatSelector
-            setChat={setMidia}
+            setChat={setChat}
           />
         }
         {chat&&
           <>
-            <MidiaLineShower
-              item={midia}
-              setMidia={setMidia}
+            <ChatBlockShower
+              chat={chat}
+              setChat={setChat}
             />
             <Button
               value={"DELETAR"}

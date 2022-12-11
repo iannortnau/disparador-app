@@ -1,0 +1,14 @@
+.body{
+    background-color: #4a8c8e;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.text{
+    font-size: 12px;
+}
+.textAlert{
+    color: rgba(215, 191, 59, 0.82);
+    font-size: 10px;
+}

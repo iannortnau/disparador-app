@@ -5,6 +5,7 @@ import Line from '../Line';
 import { GlobalContext } from '../../../context/GlobalContext';
 import ChatShower from './ChatShower';
 import { ipcRenderer } from 'electron';
+import ChatBlockShower from './ChatBlockShower';
 
 export default function ChatSelector(props){
   const {
@@ -45,47 +46,69 @@ export default function ChatSelector(props){
   }
   const [chatType, setChatType] = useState();
   const [data, setData] = useState([]);
+  const [loadChat, setLoadChat] = useState(false);
+  const [preSelectedChat, setPreSelectedChat] = useState(null);
 
   useEffect(() => {
     if(chatType !== undefined){
-      getMidiaData();
+      getChatData();
     }
   }, [chatType]);
 
-  function getMidiaData(){
+  function getChatData(){
     const args = {
       comand: "getContacts",
     }
     ipcRenderer.send("comandChannel",args);
 
     ipcRenderer.once("comandChannel",(event,args)=>{
-      console.log(args);
+      setData(args);
+      setLoadChat(false);
     });
   }
 
   return(
     <>
       <TextSmall
-        style={{fontSize:18}}
+        style={{
+          fontSize:18,
+          margin:5
+      }}
       >
         Escolha a Conversa
       </TextSmall>
 
-      <Line>
-        <Select
-          placeholder={"Tipo de Mídia"}
-          options={options}
-          onChange={(value)=>{
-            setChatType(value);
-          }}
-          styles={customStyles}
-        />
-      </Line>
+      {!preSelectedChat&&
+        <>
+          <Line>
+            <Select
+              placeholder={"Conversas"}
+              options={options}
+              onChange={(value)=>{
+                setChatType(value);
+                setLoadChat(true);
+              }}
+              styles={customStyles}
+            />
+          </Line>
 
-      <ChatShower
-        data={data}
-        setChat={props.setChat}
-      />
+          <ChatShower
+            data={data}
+            chatType={chatType}
+            setChat={setPreSelectedChat}
+            loadChat = {loadChat}
+            setLoadChat= {setLoadChat}
+          />
+        </>
+      }
+
+      {preSelectedChat&&
+        <ChatBlockShower
+          chat={preSelectedChat}
+          setChat={props.setChat}
+          setPreSelectedChat={setPreSelectedChat}
+        />
+      }
     </>
   );
 }

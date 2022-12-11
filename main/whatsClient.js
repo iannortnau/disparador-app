@@ -1,5 +1,5 @@
 const { ipcMain } = require('electron');
-const { Client , LocalAuth } = require('whatsapp-web.js');
+const { Client , LocalAuth, Message } = require('whatsapp-web.js');
 const localChrome = require('local-chrome');
 const sist = process.platform;
 let chromeRoute;
@@ -111,16 +111,20 @@ ipcMain.on("comandChannel", async (event, args) => {
     event.sender.send("comandChannel",messages);
   }
 
+  if(comand === "getContactsData"){
+    const chat = data.chat;
+    const image = await client.getProfilePicUrl(chat.id._serialized);
+    const auxChat = await client.getChatById(chat.id._serialized);
+    const msg = await auxChat.fetchMessages({limit:100});
+
+    event.sender.send("comandChannel",{msg,image});
+  }
   if(comand === "getContacts"){
-    const chats = await client.getContacts();
+    const chats = await client.getChats();
     const chatResp = [];
-    console.log(chats);
     for (let i = 0; i < chats.length; i++) {
       const chat = chats[i];
-      if(chat.isUser){
-        if(!chat.name){
-          chat.name = chat.number;
-        }
+      if(!chat.isGroup){
         chatResp.push(chat);
       }
     }

@@ -31,7 +31,7 @@
     "react-tsparticles": "^2.3.2",
     "tsparticles": "^2.3.2",
     "update-electron-app": "^2.0.1",
-    "whatsapp-web.js": "^1.18.3"
+    "whatsapp-web.js": "^1.18.4"
   },
   "devDependencies": {
     "electron": "^20.1.0",

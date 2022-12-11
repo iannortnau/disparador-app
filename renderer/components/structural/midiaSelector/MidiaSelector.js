@@ -77,7 +77,10 @@ export default function MidiaSelector(props){
   return(
     <>
       <TextSmall
-        style={{fontSize:18}}
+        style={{
+          fontSize:18,
+          margin:5
+        }}
       >
         Escolha a Mídia
       </TextSmall>
