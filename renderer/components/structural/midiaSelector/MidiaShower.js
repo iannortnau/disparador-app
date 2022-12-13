@@ -74,9 +74,10 @@ export default function MidiaShower(props){
           <MidiaDisplay
             item={midia}
             setMidia={(item)=>{
-              props.setMidia(item);
               setMidia(item)
             }}
+            action={props.action}
+            selectorText={props.selectorText}
           />
         }
       </div>

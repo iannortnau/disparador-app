@@ -44,9 +44,6 @@ export default function ChatBlockShower(props){
               style={{
                 width:"100%",
                 paddingRight:20,
-                borderBottomWidth: 1,
-                borderBottomStyle: "solid",
-                borderColor: "#477f81",
                 paddingBottom:4
               }}
             >
@@ -74,23 +71,16 @@ export default function ChatBlockShower(props){
                 );
               })}
             </div>
-            <Line>
+            <Line
+              style={{
+                width:"100%",
+                borderColor: "#477f81",
+              }}
+            >
               <Button
                 style={{
-                  width:"90%",
-                  backgroundColor:"rgba(215, 191, 59, 0.82)",
-                  fontSize:12
-                }}
-                value={"SELECIONAR"}
-                onClick={function(){
-                  props.setChat(chat);
-                }
-                }
-              />
-              <Button
-                style={{
-                  width:"90%",
-                  backgroundColor:"rgba(86,16,16,0.71)",
+                  width:"50%",
+                  backgroundColor:"rgb(89,55,55)",
                   fontSize:12
                 }}
                 value={"VOLTAR"}

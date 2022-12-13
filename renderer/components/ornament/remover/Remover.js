@@ -16,12 +16,10 @@ export default function Remover(){
     removeMidiaFromMap,
     setLoad
   } = useContext(GlobalContext);
-  const [midia, setMidia] = useState(null);
 
-  function deleta(){
+  function deleta(midia){
     setLoad(true);
     removeMidiaFromMap(midia);
-    setMidia(null);
   }
 
 
@@ -33,23 +31,12 @@ export default function Remover(){
 
         <Title style={{ margin:8 }}>Deletar Mídia</Title>
 
-        {!midia&&
-          <MidiaSelector
-            setMidia={setMidia}
-          />
-        }
-        {midia&&
-          <>
-            <MidiaLineShower
-              item={midia}
-              setMidia={setMidia}
-            />
-            <Button
-              value={"DELETAR"}
-              onClick={deleta}
-            />
-          </>
-        }
+
+        <MidiaSelector
+          action={deleta}
+          selectorText={"DELETAR"}
+        />
+
         <Button
           style={{
             backgroundColor:"rgba(86,16,16,0.71)"

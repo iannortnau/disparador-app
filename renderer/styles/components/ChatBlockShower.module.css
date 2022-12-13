@@ -16,4 +16,11 @@
     width: 290px;
     height: 100px;
     overflow-y: scroll;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-color: #54d7e4;
+
+
 }

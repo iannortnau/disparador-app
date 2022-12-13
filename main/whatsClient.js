@@ -1,12 +1,13 @@
 const { ipcMain } = require('electron');
-const { Client , LocalAuth, Message } = require('whatsapp-web.js');
+const { Client , LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const localChrome = require('local-chrome');
 const sist = process.platform;
+const fs = require('fs');
 let chromeRoute;
 
 if(sist === "linux"){
   if(localChrome){
-    chromeRoute = localChrome;
+    chromeRoute =  localChrome;
   }else {
     chromeRoute = null;
   }
@@ -51,11 +52,26 @@ ipcMain.on("comandChannel", async (event, args) => {
   if(comand === "send"){
     const message = data.message;
     const script = data.script;
-    const number = await client.getNumberId(data.number);
+    const midia = data.midia;
 
-    await client.sendMessage(number._serialized,message);
-
+    if(midia){
+      const number = data.number;
+      console.log(number);
+      const reader = fs.readFileSync(midia.fileRoute,{encoding: 'base64'});
+      const media = await new MessageMedia(midia.type.mime, reader, midia.name);
+      const resp = await client.sendMessage(number, media,{ sendAudioAsVoice: true});
+      if(resp){
+        event.sender.send("comandChannel",true);
+      }else {
+        event.sender.send("comandChannel",false);
+      }
+    }
+    if(message){
+      const number = await client.getNumberId(data.number);
+      await client.sendMessage(number._serialized,message);
+    }
     if(script){
+      const number = await client.getNumberId(data.number);
       const id = script.value;
       const chat = await client.getChatById(id);
       const messages = await chat.fetchMessages({limit:100});
@@ -90,7 +106,6 @@ ipcMain.on("comandChannel", async (event, args) => {
     event.sender.send("comandChannel",scriptsList);
   }
   if(comand === "deleteScript"){
-    console.log(data.id);
     const id = data.id;
     const chat = await client.getChatById(id);
     if(await chat.delete()){
@@ -100,7 +115,6 @@ ipcMain.on("comandChannel", async (event, args) => {
     }
   }
   if(comand === "sendScriptMessages"){
-    console.log(data.id);
     const id = data.id.value;
     const chat = await client.getChatById(id);
     const messages = await chat.fetchMessages({limit:100});
@@ -120,13 +134,12 @@ ipcMain.on("comandChannel", async (event, args) => {
     event.sender.send("comandChannel",{msg,image});
   }
   if(comand === "getContacts"){
+    console.log(await client.getState());
     const chats = await client.getChats();
     const chatResp = [];
     for (let i = 0; i < chats.length; i++) {
       const chat = chats[i];
-      if(!chat.isGroup){
-        chatResp.push(chat);
-      }
+      chatResp.push(chat);
     }
     event.sender.send("comandChannel",chatResp);
   }

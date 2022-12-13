@@ -14,6 +14,7 @@ export default function MidiaDisplay(props){
   const type = item.type;
   const route = item.route;
   const name = item.name;
+  const selectorText = props.selectorText;
 
   return(
     <Column
@@ -68,9 +69,9 @@ export default function MidiaDisplay(props){
 
       <Line>
         <Button
-          value={"CONFIRMA"}
+          value={selectorText}
           onClick={()=>{
-            props.setMidia(item);
+            props.action(item)
           }}
           style={{
             width:125

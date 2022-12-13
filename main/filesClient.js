@@ -35,7 +35,7 @@ ipcMain.on("fileChannel", async (event, args) => {
   if(comand === "audioSearch"){
     let route = dialog.showSaveDialogSync({
       properties: ["openFile"],
-      filters: [{ name: 'Áudios', extensions: ["mp3"] }]
+      filters: [{ name: 'Áudios', extensions: ["mp3", "ogg", "opus"] }]
     });
 
     if(route !== undefined){

@@ -14,6 +14,7 @@ export default function ChatSelector(props){
     { value: -1, label: 'Todos' },
     { value: 0, label: 'Lidas' },
     { value: 1, label: 'Não Lidas' },
+    { value: 2, label: 'Grupos' }
   ]
   const customStyles = {
     control: (base, state) => ({
@@ -37,9 +38,9 @@ export default function ChatSelector(props){
     }),
     menu: (base, state) => ({
       ...base,
-      background: "#3b3b3b",
+      background: "#505050",
       borderRadius: "10px",
-      borderColor: "#3b3b3b",
+      borderColor: "#505050",
       boxShadow: state.isFocused ? null : null,
       width:"299px"
     }),
@@ -95,7 +96,11 @@ export default function ChatSelector(props){
           <ChatShower
             data={data}
             chatType={chatType}
-            setChat={setPreSelectedChat}
+            setChat={(aux)=>{
+              setPreSelectedChat(aux);
+              props.setChat(aux);
+
+            }}
             loadChat = {loadChat}
             setLoadChat= {setLoadChat}
           />
@@ -105,7 +110,6 @@ export default function ChatSelector(props){
       {preSelectedChat&&
         <ChatBlockShower
           chat={preSelectedChat}
-          setChat={props.setChat}
           setPreSelectedChat={setPreSelectedChat}
         />
       }

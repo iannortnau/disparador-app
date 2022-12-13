@@ -37,9 +37,9 @@ export default function MidiaSelector(props){
     }),
     menu: (base, state) => ({
       ...base,
-      background: "#3b3b3b",
+      background: "#505050",
       borderRadius: "10px",
-      borderColor: "#3b3b3b",
+      borderColor: "#505050",
       boxShadow: state.isFocused ? null : null,
       width:"299px"
     }),
@@ -98,7 +98,8 @@ export default function MidiaSelector(props){
 
       <MidiaShower
         data={data}
-        setMidia={props.setMidia}
+        action={props.action}
+        selectorText={props.selectorText}
       />
     </>
   );

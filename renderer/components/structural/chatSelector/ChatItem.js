@@ -1,10 +1,12 @@
-import img from "../../../public/icons8-contatos-48.png";
+import imgP from "../../../public/icons8-usuário-60.png";
+import imgG from "../../../public/icons8-grupos-de-usuários-64.png";
 import Line from '../Line';
 import Image from 'next/image';
 import TextSmall from '../TextSmall';
 
 export default function ChatItem(props){
   const item = props.item;
+  const isGroup = item.isGroup;
 
   return(
     <Line
@@ -21,11 +23,21 @@ export default function ChatItem(props){
         props.setChat(item);
       }}
     >
-      <Image
-        src={img}
-        width={35}
-        height={20}
-      />
+      {isGroup&&
+        <Image
+          src={imgG}
+          width={35}
+          height={20}
+        />
+      }
+      {!isGroup&&
+        <Image
+          src={imgP}
+          width={35}
+          height={20}
+        />
+      }
+
       <TextSmall
         style={{opacity:0.5}}
       >

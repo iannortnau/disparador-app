@@ -1,11 +1,18 @@
 .body{
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    word-break: normal;
     background-color: #4a8c8e;
     border-radius: 10px;
     margin-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    max-width: 200px;
+
 }
 .text{
+
     font-size: 12px;
 }
 .textAlert{

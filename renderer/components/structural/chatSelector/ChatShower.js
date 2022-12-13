@@ -36,7 +36,7 @@ export default function ChatShower(props){
             className={styles.block}
           >
             {chatData.map(function(chat) {
-              if(chat.unreadCount>0 && chatType.value === 1){
+              if(chatType.value === 2  && chat.isGroup){
                 return (
                   <ChatItem
                     key={chat.id._serialized}
@@ -45,7 +45,16 @@ export default function ChatShower(props){
                   />
                 );
               }
-              if(chat.unreadCount===0 && chatType.value === 0){
+              if(chat.unreadCount>0 && chatType.value === 1 && !chat.isGroup){
+                return (
+                  <ChatItem
+                    key={chat.id._serialized}
+                    item={chat}
+                    setChat={props.setChat}
+                  />
+                );
+              }
+              if(chat.unreadCount===0 && chatType.value === 0 && !chat.isGroup){
                 return (
                   <ChatItem
                     key={chat.id._serialized}
@@ -66,16 +75,6 @@ export default function ChatShower(props){
             })}
           </div>
         }
-
-        {/*chat&&
-          <ChatDisplay
-            item={chat}
-            setChat={(item)=>{
-              props.setChat(item);
-              setChat(item)
-            }}
-          />
-        */}
       </div>
     </>
   );
